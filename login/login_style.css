@@ -3,7 +3,7 @@ body{
     margin: 100px;
 }
 
-#logo_header_login{
+.logo_login{
     width: 200px;
     height: 170px;
 }
