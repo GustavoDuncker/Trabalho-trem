@@ -2,3 +2,8 @@ body{
     text-align: center;
     margin: 100px;
 }
+
+#logo_header_login{
+    width: 200px;
+    height: 170px;
+}
