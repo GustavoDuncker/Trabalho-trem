@@ -3,7 +3,7 @@ body{
     text-align: center;
     margin: 50px;
 }
-<<<<<<< HEAD
+
 footer{
     font-size: 40px;
   
@@ -11,8 +11,8 @@ footer{
 
 #login{
     background-color: black;
-=======
-footer{text-size-adjust: 15px;
-    
->>>>>>> 4967bd27b3a53c85f7820f786ea2a2fc327bd1b5
+}
+
+footer{
+    text-size-adjust: 15px;
 }
