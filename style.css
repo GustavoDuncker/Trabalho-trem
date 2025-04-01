@@ -9,6 +9,9 @@ footer{
   
 }
 
+h1{
+    -webkit-text-fill-color: aqua;
+}
 
 footer{
     text-size-adjust: 15px;
