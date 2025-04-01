@@ -32,9 +32,11 @@ body{
 #input1{
     background-color: blue;
     border-radius: 20px;
+    border: 0cm;
 }
 
 #input2{
     background-color: blue;
     border-radius: 20px;
+    border: 0cm;
 }
