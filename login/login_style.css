@@ -14,3 +14,7 @@ body{
 .input_elements{
     margin: 30px;
 }
+
+#box{
+    margin-left: 650px;
+}
