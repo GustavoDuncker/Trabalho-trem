@@ -3,6 +3,11 @@ body{
     margin: 100px;
 }
 
+.box_txt{
+    background-color: blue;
+    border-radius: 20px;
+}
+
 .logo_login{
     width: 200px;
     height: 170px;
@@ -22,4 +27,14 @@ body{
 }
 #button_access{
     margin-left: 165px;
+}
+
+#input1{
+    background-color: blue;
+    border-radius: 20px;
+}
+
+#input2{
+    background-color: blue;
+    border-radius: 20px;
 }

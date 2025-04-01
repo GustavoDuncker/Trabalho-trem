@@ -9,6 +9,9 @@ footer{
   
 }
 
+h1{
+    -webkit-text-fill-color: aqua;
+}
 
 #login{
 font-size: 40px;
