@@ -3,14 +3,23 @@ body{
     margin: 100px;
 }
 
-#logo_header_login{
+.logo_login{
     width: 200px;
     height: 170px;
 }
 
 .inputs{
     display: flex;
+    align-items: center;
+    text-align: center;
 }
 .input_elements{
     margin: 30px;
+}
+
+#box{
+    margin-left: 650px;
+}
+#button_access{
+    margin-left: 165px;
 }
