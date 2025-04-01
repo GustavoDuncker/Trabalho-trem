@@ -3,6 +3,7 @@ body{
     text-align: center;
     margin: 50px;
 }
-footer{font-size: 40px;
-    
+footer{
+    font-size: 40px;
+    border: 15px;
 }
