@@ -1,17 +1,13 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login_style.css">
-    <script src="formulario.js"></script>
+    <title>JATOTREM - Login</title>
 </head>
 <body id="body_login">
     <header id="cabecalho_login">
-        <img src="img_login/trem - Copia.jpg" alt="logo" class="logo_login">
-        <div id="corjato">
-            <h1>JATOTREM</h1>
-        </div>
+        <h1>JATOTREM</h1>
     </header>
 
     <main>
@@ -20,25 +16,26 @@
         <div id="box">
             <div class="inputs">
                 <h3 class="input_elements">email</h3>
-                <input type="email" name="" id="input1" class="input_elements">
+                <input type="email" id="input1" class="input_elements" placeholder="Digite seu email">
             </div>
 
             <div class="inputs">
                 <h3 class="input_elements">senha</h3>
-                <input type="text" name="" id="input2" class="input_elements">
+                <input type="password" id="input2" class="input_elements" placeholder="Digite sua senha">
             </div>
 
-            <div id="login" >
+            <div class="inputs">
                 <input type="button" value="Acessar conta" class="input_elements" id="button_access">
-            </div> 
+            </div>
         </div>
-        <p><a href="">Esqueci minha senha</a></p>
+        <p><a href="#">Esqueci minha senha</a></p>
     </main>
 
     <footer>
-        <img src="img_login/trem - Copia.jpg" alt="" class="logo_login">
         <h3>Ferroviária</h3>
-        <h4>Jatorem</h4>
+        <h4>Jatotrem</h4>
     </footer>
+
+    <script src="login.js"></script>
 </body>
 </html>
