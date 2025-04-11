@@ -40,3 +40,18 @@ body{
     border-radius: 20px;
     border: 0cm;
 }
+
+#corjato{
+    color: rgb(74, 108, 182);
+}
+
+#login{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 0;
+    margin-top: 200px;
+    width: 170px;
+    height: 60px;
+    background-color: rgb(0, 0, 66);
+}
