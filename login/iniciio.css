@@ -14,7 +14,7 @@ body {
   }
   
   .cabecalho {
-    background-image: url('bg-header.jpg'); /* Substitua pela imagem correta */
+    background-image: url('bg-header.jpg'); 
     background-size: cover;
     background-position: center;
     padding: 20px 0;
