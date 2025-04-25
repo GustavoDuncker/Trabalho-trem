@@ -19,26 +19,36 @@ body{
     text-align: center;
 }
 .input_elements{
-    margin: 30px;
+    margin: 20px;
 }
 
 #box{
     margin-left: 650px;
 }
 #button_access{
-    margin-left: 165px;
+    text-align: center;
+    margin-left: 80px;
+    border: 0;
+    padding: 20px 60px;
+    background-color: #004AAD;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
 }
 
 #input1{
-    background-color: blue;
-    border-radius: 20px;
+    background-color: #2E4058;
+    border-radius: 10px;
     border: 0cm;
+    padding: 20px;
 }
 
 #input2{
-    background-color: blue;
-    border-radius: 20px;
+    background-color: #2E4058;
+    border-radius: 10px;
     border: 0cm;
+    padding: 20px;
+    margin-left: 25px;
 }
 
 #corjato{
@@ -56,3 +66,19 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
+#cabecalho_login{
+    color: #428CE2;
+    margin: 80px 40px;
+}
+
+#img_header{
+    height: 180px;
+}
+footer{
+    margin: 90px auto;
+}
+
+#esqueci{
+    color: #70CFFF;
+    text-decoration: none;
+}
