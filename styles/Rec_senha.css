@@ -26,10 +26,21 @@ body{
     margin-left: 80px;
     border: 0;
     padding: 20px 60px;
-    background-color: #004AAD;
+    background-color: #359fc2;
     color: white;
     font-size: 20px;
     border-radius: 30px;
+}
+
+#button_login{
+    text-align: center;
+    margin-left: 90px;
+    border: 0;
+    padding: 5px 30px;
+    background-color: #359fc2;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;  
 }
 
 #input1{
@@ -78,5 +89,5 @@ footer{
 }
 
 body{
-    background-color: #003b7a;
+    background-color: #004AAD;
 }
