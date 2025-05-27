@@ -5,15 +5,23 @@
     <title>RecuperarSenha</title>
     <link rel="stylesheet" href="../styles/Rec_senha.css">
 </head>
-<body>
-
-<img src="treminicio.png" alt="">
-    <h1>RECUPERAR MINHA <br> SENHA</h1>
-        <form id="Email"></form>
-        <label for="nome">Email: <input type="text" id="Email" placeholder="Email*" required></label>
-        <br>
-        <br>
-        <button type="submit">Recuperar senha</button>
-
-</body>
+<body id="body_RecSenha">
+    <header id="cabecalho_RecSenha">
+        <img src="../assets/images/trem.jpg" alt="" id="img_header">
+        <h1>JATOTREM</h1>
+    </header>
+    <main>
+        <h1>Recuperar minha senha</h1>
+        <div id="box">
+            <div class="inputs">
+                <h3 class="input_elements">E-MAIL</h3>
+                <input type="email" id="input1" class="input_elements" placeholder="Digite seu email">
+            </div>
+            <br>
+            <div class="inputs">
+                <a href="login.html">
+                <input type="button" value="Acessar conta" class="input_elements" id="button_access">
+            </a>
+            </div>
+        </div>
 </html>
