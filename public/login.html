@@ -16,21 +16,26 @@
         <h1>LOGIN</h1>
 
         <div id="box">
-            <div class="inputs">
-                <h3 class="input_elements">E-MAIL</h3>
-                <input type="email" id="input1" class="input_elements" placeholder="Digite seu email">
-            </div>
+            <form action="">
 
-            <div class="inputs">
-                <h3 class="input_elements">SENHA</h3>
-                <input type="password" id="input2" class="input_elements" placeholder="Digite sua senha">
-            </div>
+                <div class="inputs">
+                    <h3 class="input_elements">E-MAIL</h3>
+                    <input type="email" id="input1" class="input_elements" placeholder="Digite seu email" required>
+                </div>
+    
+                <div class="inputs">
+                    <h3 class="input_elements">SENHA</h3>
+                    <input type="password" id="input2" class="input_elements" placeholder="Digite sua senha" required>
+                </div>
+    
+                <div class="inputs">
+                    <a href="inicio.html">
+                        <input type="submit" value="Acessar conta" onclick="valida()" class="input_elements" id="button_access" >
+                    </a>
+                </div>
 
-            <div class="inputs">
-                <a href="inicio.html">
-                <input type="button" value="Acessar conta" class="input_elements" id="button_access">
-            </a>
-            </div>
+
+            </form>
         </div>
         <p><a href="RecuperarSenha.html" id="esqueci">Esqueci minha senha</a></p>
     </main>
