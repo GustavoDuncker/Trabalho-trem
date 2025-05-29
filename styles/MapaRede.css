@@ -1,0 +1,38 @@
+header{
+    background-color: #235da9;
+    padding: 10px;
+}
+#img1{
+    width: 90px;
+    height: 90px;
+    align-items: center;
+}
+#cab{
+    background-color: #2E4058;
+    border-radius: 10px;
+    border: 5cm;
+    padding: 1px;
+    margin-left: -10px;
+}
+.pesquisa {
+    margin-top: 5px;
+    align-items: center;
+  }
+  .pesquisa input {
+    width: 800px;
+    max-width: 300px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    align-items: center;
+  }
+  body{
+    background-color: #235da9;
+    align-items: center;
+  }
+  #img2{
+    width: 90px;
+    height: 90px;
+    align-items: center;
+  }
