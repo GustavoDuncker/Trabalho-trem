@@ -1,11 +1,14 @@
 header{
     background-color: #235da9;
     padding: 10px;
+    align-items: center;
+    
 }
 #img1{
     width: 90px;
     height: 90px;
     align-items: center;
+    text-align: center;
 }
 #cab{
     background-color: #2E4058;
@@ -13,10 +16,14 @@ header{
     border: 5cm;
     padding: 1px;
     margin-left: -10px;
+    align-items: center;
+    text-align: center;
 }
 .pesquisa {
     margin-top: 5px;
     align-items: center;
+    text-align: center;
+    
   }
   .pesquisa input {
     width: 800px;
@@ -26,13 +33,25 @@ header{
     border: none;
     outline: none;
     align-items: center;
+    
   }
   body{
     background-color: #235da9;
     align-items: center;
+    
   }
   #img2{
     width: 90px;
     height: 90px;
     align-items: center;
+    text-align: center;
+   
+  }
+  #cabecalho{
+    width: 500px;
+    height: 160px;
+   margin: 0px; 
+  padding: 0px;
+  margin-left: -19px;
+
   }
