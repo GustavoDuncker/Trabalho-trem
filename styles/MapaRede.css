@@ -9,9 +9,27 @@ header{
     height: 90px;
     align-items: center;
     text-align: center;
+
+}
+#mapa{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    text-align: center;
+
 }
 #cab{
     background-color: #2E4058;
+    border-radius: 10px;
+    border: 5cm;
+    padding: 1px;
+    margin-left: -10px;
+    align-items: center;
+    text-align: center;
+
+}
+#layout{
+  background-color: #2E4058;
     border-radius: 10px;
     border: 5cm;
     padding: 1px;
@@ -45,6 +63,7 @@ header{
     height: 90px;
     align-items: center;
     text-align: center;
+    
    
   }
   #cabecalho{
