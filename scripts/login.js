@@ -2,9 +2,14 @@ function valida() {
     let email = document.getElementById("input1").value;
     let senha = document.getElementById("input2").value;
 
+
     const invalido = [' ', '!', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~'];
     const possuiInvalidoEmail = invalido.some(char => email.includes(char));
-
+    const errorSenha = document.getElementById("errorSenha");
+    const errorEmail = document.getElementById("errorEmail");
+    errorEmail.textContent ="";
+    errorSenha.textContent="";
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
     const emailValido = emailRegex.test(email) && !possuiInvalidoEmail;
 
@@ -16,9 +21,10 @@ function valida() {
     const contemCaractereProibido = senha.includes(';');
 
     if (!emailValido) {
-        alert('Email inválido. Por favor, insira um email válido.');
+        errorEmail.textContent = "Email inválido. Por favor, insira um email válido.";
+        
     } else if (!temComprimentoMinimo || !temNumero || !temLetraMaiuscula || contemCaractereProibido) {
-        alert('Senha inválida. A senha deve ter pelo menos 8 caracteres, um número, uma letra maiúscula e não conter o caractere ";".');
+        errorSenha.textContent = 'Senha inválida. A senha deve ter pelo menos 8 caracteres, um número, uma letra maiúscula e não conter o caractere ";".';
     } else {
         console.log("Login bem-sucedido.");
         window.location.href = "inicio.html";
