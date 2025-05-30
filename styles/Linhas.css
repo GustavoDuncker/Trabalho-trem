@@ -109,7 +109,7 @@ main {
   background-color: #808080;
   border-radius: 5px;
   overflow: hidden;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 .condicao-trens-titulo {
@@ -186,4 +186,13 @@ footer {
   font-size: 20px;
   color: #3e8edd;
   margin: 0;
+}
+
+#linhas_imagem{
+  height: 500px;
+  width: 500px;
+ align-items: center;
+ margin: 0;
+ justify-content: center;
+ display: flex;
 }
