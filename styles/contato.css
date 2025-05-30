@@ -158,3 +158,20 @@ footer {
     height: 150px;
   }
 }
+
+
+.imagem-centralizada {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imagem-centralizada img {
+  width: 280px; 
+  height: auto;
+  border-radius: 10px;
+}
+
+#font{
+  font-size: 10px;
+  text-align: center;
+}
