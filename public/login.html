@@ -11,29 +11,30 @@
 
 <body id="body_login">
     <header id="cabecalho_login">
-        <img src="../assets/images/iconTrem.png" alt="" id="img_header">
-        <h1>JATOTREM</h1>
+        <h1 id="tituloJato">JATOTREM</h1>
+        <img src="../assets/images/treminicio.png" alt="" id="img_header">
     </header>
 
     <main>
-        <h1>LOGIN</h1>
+        <h1 id="loginTxt">LOGIN</h1>
 
         <div id="box">
             <form >
 
                 <div class="inputs">
                     <h3 class="input_elements">E-MAIL</h3>
-                    <input type="email" id="input1" class="input_elements" placeholder="Digite seu email" required>
+                    <input type="email" id="input1" class="input_elements" class="emailSenha" placeholder="Digite seu email">
+                    <div class="error" id="errorEmail"></div>
                 </div>
 
                 <div class="inputs">
                     <h3 class="input_elements">SENHA</h3>
-                    <input type="password" id="input2" class="input_elements" placeholder="Digite sua senha" required>
+                    <input type="password" id="input2" class="input_elements" class="emailSenha" placeholder="Digite sua senha">
+                    <div class="error" id="errorSenha"></div>
                 </div>
 
                 <div class="inputs">
-                    <input type="button" value="Acessar conta" onclick="valida()" class="input_elements"
-                        id="button_access">
+                    <input type="button" value="Acessar conta" onclick="valida()" class="input_elements" id="button_access">
                 </div>
 
 
