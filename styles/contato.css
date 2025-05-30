@@ -175,3 +175,10 @@ footer {
   font-size: 10px;
   text-align: center ;
 }
+
+#main-voltar {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
