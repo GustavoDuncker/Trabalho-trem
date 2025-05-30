@@ -1,89 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/contato.css">
-    <link rel="icon" href="../assets/images/trem inicioo.png">
-
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles/contato.css" />
+  <link rel="icon" href="../assets/images/trem inicioo.png" />
+  <title>Contato - Jatotrem</title>
 </head>
 <body>
-    <body>
-        <header class="cabecalho">
-          <div class="logo-container">
-            
-            
-            <h1 class="txtFerroviaria">F e r r o v i á r i a</h1>
-            <h2 class="txtJato">JATOTREM</h2>
-          </div>
-          <div class="pesquisa">
-            <input type="text" placeholder="Pesquisar">
-          </div>
-        </header>
-        <main>
-            <h1>Contato</h1>
-            <div id="formulario">
-            <form>
-                <fieldset>
-                  <legend>Qual o motivo do meu contato?</legend>
-                  <div>
-                    <input
-                      type="radio"
-                      id="contactChoice1"
-                      name="contact"
-                      value="email"
-                      checked />
-                    <label for="contactChoice1">Comentário</label>
-              
-                    <input type="radio" id="contactChoice2" name="contact" value="phone" />
-                    <label for="contactChoice2">Pergunta</label>
-              
-                    <input type="radio" id="contactChoice3" name="contact" value="mail" />
-                    <label for="contactChoice3">Sugestão</label>
+  <header class="cabecalho">
+    <div class="logo-container">
+      <h1 class="txtFerroviaria">F e r r o v i á r i a</h1>
+      <h2 class="txtJato">JATOTREM</h2>
+    </div>
+    <div class="pesquisa">
+      <input type="text" placeholder="Pesquisar" />
+    </div>
+  </header>
 
-                    <input type="radio" id="contactChoice3" name="contact" value="mail" />
-                    <label for="contactChoice3">Reclamação</label>
-                  </div>
-                  <div>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
+  <main>
+    <h1>Contato</h1>
 
-            <section class="maquinista-secao">
-              <h2>INFORMAÇÕES</h2>
-              <div class="grid-menu">
-                <a href="#" class="menu-item">
-                  <img class="imgMenu" src="../assets/images/mapaTrem.png" alt="Mapa da rede">
-                  <span>Mapa da rede</span>
-                </a>
-                <a href="#" class="menu-item">
-                  <img class="imgMenu" src="../assets/images/iconTrem.png" alt="Linhas">
-                  <span>Linhas</span>
-                </a>
-                <a href="#" class="menu-item">
-                  <img class="imgMenu" src="../assets/images/iconInfo2.png" alt="Informações">
-                  <span>Informações</span>
-                </a>
-                <a href="../public/contato.html" class="menu-item">
-                  <img src="../assets/images/iconTelefone.png" alt="Contatos"> 
-                  <span>Contatos</span>
-                </a>
-              </div>
-            </section>
-          </main>
-        
-          <footer>
-            <div class="logoContainer2">
-              
-              <img src="../assets/images/treminicio.png" alt="Ferroviária Jatotrem" class="footer-logo">
-              <h1 class="txtFerroviaria2">F e r r o v i á r i a</h1>
-              <h2 class="txtJato2">JATOTREM</h2>
-            </div>
-          </footer>
+    <div id="formulario">
+      <form>
+        <fieldset>
+          <legend>Qual o motivo do meu contato?</legend>
+          <div>
+            <input type="radio" id="comentario" name="contact" value="comentario" checked />
+            <label for="comentario">Comentário</label>
+
+            <input type="radio" id="pergunta" name="contact" value="pergunta" />
+            <label for="pergunta">Pergunta</label>
+
+            <input type="radio" id="sugestao" name="contact" value="sugestao" />
+            <label for="sugestao">Sugestão</label>
+
+            <input type="radio" id="reclamacao" name="contact" value="reclamacao" />
+            <label for="reclamacao">Reclamação</label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <section class="maquinista-secao">
+      <h2>INFORMAÇÕES</h2>
+      <div class="grid-formulario">
+        <div class="coluna-esquerda">
+          <label for="nome">NOME COMPLETO</label>
+          <input id="nome" type="text" placeholder="Digite seu nome" />
+
+          <label for="email">EMAIL</label>
+          <input id="email" type="email" placeholder="Digite seu e-mail" />
+
+          <label for="telefone">TELEFONE</label>
+          <input id="telefone" type="tel" placeholder="Digite seu telefone" />
+        </div>
+
+        <div class="coluna-direita">
+          <label for="mensagem">MENSAGEM</label>
+          <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logoContainer2">
+      <img src="../assets/images/treminicio.png" alt="Ferroviária Jatotrem" class="footer-logo" />
+      <h1 class="txtFerroviaria2">F e r r o v i á r i a</h1>
+      <h2 class="txtJato2">JATOTREM</h2>
+    </div>
+  </footer>
 </body>
-</html>\\\\
+</html>
