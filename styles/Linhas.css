@@ -188,11 +188,19 @@ footer {
   margin: 0;
 }
 
-#linhas_imagem{
-  height: 500px;
-  width: 500px;
- align-items: center;
- margin: 0;
- justify-content: center;
- display: flex;
-}
+table {
+      width: 50%;
+      border-collapse: collapse;
+      color: #000;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+      background-color: rgb(57, 138, 138);
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
