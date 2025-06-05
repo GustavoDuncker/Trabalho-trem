@@ -27,6 +27,6 @@ function valida() {
         errorSenha.textContent = 'Senha inválida. A senha deve ter pelo menos 8 caracteres, um número, uma letra maiúscula e não conter o caractere ";".';
     } else {
         console.log("Login bem-sucedido.");
-        window.location.href = "inicio.html";
+        window.location.href = "inicioAdm.html";
     }
 }
