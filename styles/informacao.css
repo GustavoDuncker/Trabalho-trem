@@ -14,7 +14,7 @@ body {
   background-position: center;
   padding: 20px 0;
   text-align: center;
-  height: 210px;
+  height: 190px;
 }
 
 a{
@@ -23,19 +23,19 @@ a{
 }
 
 .logo-container img {
-  height: 100px;
+
 }
 
 .txtJato {
   font-family: system-ui, sans-serif;
-  font-size: 35px;
+  font-size: 55px;
   color: #3e8edd;
   margin: 0;
 }
 
 .txtFerroviaria {
   font-family: Cambria, serif;
-  font-size: 20px;
+  font-size: 25px;
   margin: 0;
 }
 
@@ -232,6 +232,7 @@ footer {
 #main-voltar {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
+  margin: 10px;
 }
