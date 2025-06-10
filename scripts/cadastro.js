@@ -70,7 +70,7 @@ function validaCadastro() {
     else if (possuiInvalidoEndereco) {
         window.alert('Endereço inválido.');
     }
-    else if (!temNumeroContato || !temComprimentoMinimoContato || temLetraMinusculaContato || temLetraMaiusculaContato) {
+    else if (!temNumeroContato || !temComprimentoMinimoContato || temLetraMinusculaContato || temLetraMaiusculaContato || possuiInvalidoContato) {
         window.alert('Contato inválido, insira apenas os números e sem o DDD.');
     }
     
