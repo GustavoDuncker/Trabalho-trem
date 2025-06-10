@@ -8,9 +8,11 @@ function validaCadastro() {
     let endereco = document.getElementById("inputEndereco").value;
     let contato = document.getElementById("inputCtt").value;
 
-    const invalido = [' ', '!', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~'];
+    const invalidoEmail = [' ', '!', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~'];
+    const invalido = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~'];
+
     
-    const possuiInvalidoEmail = invalido.some(char => email.includes(char));
+    const possuiInvalidoEmail = invalidoEmail.some(char => email.includes(char));
     const possuiInvalidoNome = invalido.some(char => nome.includes(char));
     const possuiInvalidoFuncao = invalido.some(char => funcao.includes(char));
     const possuiInvalidoNumero = invalido.some(char => numero.includes(char));
@@ -70,7 +72,7 @@ function validaCadastro() {
     else if (possuiInvalidoEndereco) {
         window.alert('Endereço inválido.');
     }
-    else if (!temNumeroContato || !temComprimentoMinimoContato || temLetraMinusculaContato || temLetraMaiusculaContato) {
+    else if (!temNumeroContato || !temComprimentoMinimoContato || temLetraMinusculaContato || temLetraMaiusculaContato || possuiInvalidoContato) {
         window.alert('Contato inválido, insira apenas os números e sem o DDD.');
     }
     
