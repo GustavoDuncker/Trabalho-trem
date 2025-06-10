@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+header{
+    text-align: center;
+}
+
+#boxTitulo{
+    margin: 35px;
+    margin-left: 70px;
+}
+
+#tituloCadastro{
+    margin: 35px;
+    color: #162144;
+}
+
+.entradas{
+    display: flex;
+    width: 300px;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin: 35px;
+}
+
+.boxEntradas{
+    background-color: #162144;
+    padding: 20px;
+    height: 10px;
+    width: 150px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.nomeEntradas{
+    color: #162144;
+    font-weight: bold;
+    font-size: 15px;
+    width: 70px;
+}
+
+#buttonCadastro{
+    background-color: #004aad;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    margin: 35px;
+}
+
+#buttonTxt{
+    border: 0;
+    background-color: #004aad;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 6px;
+}
+
+
