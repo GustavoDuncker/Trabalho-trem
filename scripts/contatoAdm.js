@@ -16,6 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     alert("Informações enviadas com sucesso!");
-    window.location.href = "inicioFuncionario.html"; 
+    window.location.href = "inicioAdm.html"; // redireciona para sua página inicial
   });
 });

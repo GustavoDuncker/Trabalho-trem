@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../styles/contato.css" />
   <link rel="icon" href="../assets/images/iconTrem.png" />
   <title>Contato - JATOTREM</title>
+  <script src="../scripts/contato.js"></script>
 </head>
 <body>
   <header class="cabecalho">
@@ -29,7 +30,7 @@
     <h1>Contato</h1>
 
     <div id="formulario">
-      <form>
+      <form id="meuFormulario">
         <fieldset>
           <legend>Qual o motivo do meu contato?</legend>
           <div>
@@ -46,7 +47,7 @@
             <label for="reclamacao">Reclamação</label>
           </div>
         </fieldset>
-      </form>
+      
     </div>
 
     <section class="maquinista-secao">
@@ -70,9 +71,10 @@
         </div>
       </div>
  
-      <div id="botaozinho">
-  <button id="botao_enviar">Enviar</button>
-</div>
+        <div id="botaozinho">
+          <button id="botao_enviar" type="submit">Enviar</button>
+        </div>
+      </form>
  
   </section>
   </main>
