@@ -29,12 +29,12 @@
   <main>
     <h1>Contato</h1>
 <div id="formulario">
-  <form>
+  <form id="meuFormulario">
     <fieldset>
       <legend>Qual o motivo do meu contato?</legend>
       <div class="opcoes">
         <div class="opcao">
-          <input type="radio" id="comentario" name="contact" value="comentario" checked />
+          <input type="radio" id="comentario" name="contact" value="comentario" />
           <label for="comentario">Comentário</label>
         </div>
         <div class="opcao">
@@ -51,34 +51,31 @@
         </div>
       </div>
     </fieldset>
+
+    <div class="grid-formulario">
+      <div class="coluna-esquerda">
+        <label for="nome">NOME COMPLETO</label>
+        <input id="nome" type="text" placeholder="Digite seu nome" />
+
+        <label for="email">EMAIL</label>
+        <input id="email" type="email" placeholder="Digite seu e-mail" />
+
+        <label for="telefone">TELEFONE</label>
+        <input id="telefone" type="tel" placeholder="Digite seu telefone" />
+      </div>
+
+      <div class="coluna-direita">
+        <label for="mensagem">MENSAGEM</label>
+        <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
+      </div>
+    </div>
+
+    <div id="botaozinho">
+      <button id="botao_enviar" type="submit">Enviar</button>
+    </div>
   </form>
 </div>
 
-    <section class="maquinista-secao">
-      <h2>INFORMAÇÕES</h2>
-    
-      <div class="grid-formulario">
-        <div class="coluna-esquerda">
-          <label for="nome">NOME COMPLETO</label>
-          <input id="nome" type="text" placeholder="Digite seu nome" />
-    
-          <label for="email">EMAIL</label>
-          <input id="email" type="email" placeholder="Digite seu e-mail" />
-    
-          <label for="telefone">TELEFONE</label>
-          <input id="telefone" type="tel" placeholder="Digite seu telefone" />
-        </div>
-    
-        <div class="coluna-direita">
-          <label for="mensagem">MENSAGEM</label>
-          <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
-        </div>
-      </div>
- 
-      <div id="botaozinho">
-          <button id="botao_enviar">Enviar</button>
-      </div>
- 
   </section>
   </main>
   
