@@ -229,3 +229,8 @@ body {
     font-size: 16px;
     width: 100%;
   }
+
+  #txtCondicao{
+    text-decoration: none;
+    color: white;
+  }
