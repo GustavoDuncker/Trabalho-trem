@@ -159,4 +159,12 @@ body {
     margin-left: 70px;
     margin-top: 20px;
 }
-
+#buttonSair{
+    margin-left: 30px;
+    border: 0;
+    color: white;
+    background-color: #002f5e;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+}
