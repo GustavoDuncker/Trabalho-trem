@@ -79,19 +79,16 @@ h1 {
 
 .opcoes {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 10px 20px; 
-  justify-items: center; 
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 15px 20px; /* espaço entre os blocos */
   margin-top: 10px;
 }
 
-.opcoes input[type="radio"] {
-  margin-right: 5px;
-}
-
-.opcoes label {
+.opcao {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .maquinista-secao {
@@ -211,4 +208,11 @@ footer {
   border: none;
   border-radius: 12px;
   cursor: pointer;
+  width: 321px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#botaozinho{
+  text-align: center;
 }

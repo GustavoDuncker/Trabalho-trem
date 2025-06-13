@@ -29,25 +29,30 @@
     <h1>Contato</h1>
 
     <div id="formulario">
-      <form>
-        <fieldset>
-          <legend>Qual o motivo do meu contato?</legend>
-          <div>
-            <input type="radio" id="comentario" name="contact" value="comentario" checked />
-            <label for="comentario">Comentário</label>
-
-            <input type="radio" id="pergunta" name="contact" value="pergunta" />
-            <label for="pergunta">Pergunta</label>
-
-            <input type="radio" id="sugestao" name="contact" value="sugestao" />
-            <label for="sugestao">Sugestão</label>
-
-            <input type="radio" id="reclamacao" name="contact" value="reclamacao" />
-            <label for="reclamacao">Reclamação</label>
-          </div>
-        </fieldset>
-      </form>
-    </div>
+  <form>
+    <fieldset>
+      <legend>Qual o motivo do meu contato?</legend>
+      <div class="opcoes">
+        <div class="opcao">
+          <input type="radio" id="comentario" name="contact" value="comentario" checked />
+          <label for="comentario">Comentário</label>
+        </div>
+        <div class="opcao">
+          <input type="radio" id="pergunta" name="contact" value="pergunta" />
+          <label for="pergunta">Pergunta</label>
+        </div>
+        <div class="opcao">
+          <input type="radio" id="sugestao" name="contact" value="sugestao" />
+          <label for="sugestao">Sugestão</label>
+        </div>
+        <div class="opcao">
+          <input type="radio" id="reclamacao" name="contact" value="reclamacao" />
+          <label for="reclamacao">Reclamação</label>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
 
     <section class="maquinista-secao">
       <h2>INFORMAÇÕES</h2>
@@ -71,8 +76,8 @@
       </div>
  
       <div id="botaozinho">
-  <button id="botao_enviar">Enviar</button>
-</div>
+          <button id="botao_enviar">Enviar</button>
+      </div>
  
   </section>
   </main>
