@@ -74,6 +74,24 @@ h1 {
   max-width: 500px;
   box-sizing: border-box;
   margin-top: 20px;
+  color: white;
+}
+
+.opcoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas */
+  gap: 10px 20px; /* espaço entre linhas e colunas */
+  justify-items: center; /* centraliza horizontalmente cada item */
+  margin-top: 10px;
+}
+
+.opcoes input[type="radio"] {
+  margin-right: 5px;
+}
+
+.opcoes label {
+  display: flex;
+  align-items: center;
 }
 
 .maquinista-secao {
