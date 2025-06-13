@@ -79,8 +79,8 @@ h1 {
 
 .opcoes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-  gap: 15px 20px; /* espaço entre os blocos */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px 20px; 
   margin-top: 10px;
 }
 
@@ -178,14 +178,14 @@ footer {
 .imagem-centralizada {
   text-align: center;
   margin-top: 20px;
-    border-radius: 12px; /* ou qualquer valor que quiser */
+    border-radius: 12px; 
 }
 
 .imagem-centralizada img {
   width: 280px; 
   height: auto;
   border-radius: 10px;
-    border-radius: 12px; /* ou qualquer valor que quiser */
+    border-radius: 12px; 
 }
 
 #font{
