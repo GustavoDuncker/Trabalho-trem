@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,28 +7,26 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="assets/images/treminicio.png">
     <title>Aplicativo trem</title>
-    
 </head>
 <body>
-    <img src="assets/images/treminicio.png" alt="">
-    <div id="titulo">
-        <h2 id="titulo1">Ferrovária</h2>
-        <h1 id="titulo2">JATOTREM</h1>
-    </div>
+    <main class="main-content">
+        <img src="assets/images/treminicio.png" alt="Locomotiva">
+        <div id="titulo">
+            <h2 id="titulo1">Ferrovária</h2>
+            <h1 id="titulo2">JATOTREM</h1>
+        </div>
+
+        <div class="button-container">
+            <button class="login">
+                <a href="public/loginMaquinista.html" id="link_loginMaquinista"><b>MAQUINISTA</b></a>
+            </button>
+            <button class="login">
+                <a href="public/loginAdm.html" id="link_loginAdm"><b>ADMINISTRADOR</b></a>
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        </footer>
 </body>
-
-<footer>
-    <div>
-        <button class="login" id="loginMaquinista">
-            <a href="public/loginMaquinista.html" id="link_loginMaquinista"><b>MAQUINISTA</b></a> 
-        </button>
-    </div>
-
-    <div>
-        <button class="login">
-            <a href="public/loginAdm.html" id="link_loginAdm"><b>ADMINISTRADOR</b></a>
-        </button>
-    </div>
-
-</footer>
-</html> 
+</html>
