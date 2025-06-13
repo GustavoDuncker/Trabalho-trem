@@ -69,3 +69,10 @@ header{
 }
 
 
+#main-voltar {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px;
+}
