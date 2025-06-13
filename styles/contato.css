@@ -163,12 +163,14 @@ footer {
 .imagem-centralizada {
   text-align: center;
   margin-top: 20px;
+    border-radius: 12px; /* ou qualquer valor que quiser */
 }
 
 .imagem-centralizada img {
   width: 280px; 
   height: auto;
   border-radius: 10px;
+    border-radius: 12px; /* ou qualquer valor que quiser */
 }
 
 #font{
@@ -181,4 +183,14 @@ footer {
   align-items: center;
   font-size: 16px;
   font-weight: bold;
+}
+
+
+#botao_enviar {
+ padding: 10px 20px;
+  color: #ffffff;
+  background-color:#0066cc; 
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
 }
