@@ -40,6 +40,8 @@ body {
   }
   .pesquisa {
     margin-top: 5px;
+    display: flex;
+    margin: 16px;
   }
   
   .pesquisa input {
