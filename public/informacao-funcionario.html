@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../styles/informacao2.css" />
+  <link rel="stylesheet" href="../styles/informacao.css" />
   <link rel="icon" href="../assets/images/iconTrem.png" />
-  <title>Status - JATOTREM</title>
+  <title>Informações - JATOTREM</title>
 </head>
 <body>
   <header class="cabecalho">
@@ -19,6 +19,12 @@
 
   </header>
     <main>
+        <div id="main-voltar">
+            <a href="inicioFuncionario.html">
+                <span>◀</span>
+                <span>Voltar</span>
+            </a>
+        </div>
         
         <section id="informacoes">
             <div id="logo-informacoes">
@@ -26,25 +32,27 @@
                 <h2>Informações</h2>
             </div>
             <div id="condicao-trens-container">
-                <h3 id="condicao-trens-titulo">STATUS</h3>
+                <h3 id="condicao-trens-titulo">CONDIÇÃO DOS TRENS</h3>
                 <ul id="lista-trens">
                     <li class="trem ativo">
                         <p class="nome-trem">Trem 1</p>
-                        <p class="condicao">Rodando</p>
+                        <p class="condicao">CONDIÇÃO:</p>
+                        <p class="status">Em atividade</p>
                     </li>
                     <li class="trem manutencao">
                         <p class="nome-trem">Trem 2</p>
-                        <p class="condicao">Estacionado</p>
+                        <p class="condicao">CONDIÇÃO:</p>
+                        <p class="status">Em manutenção</p>
                     </li>
                     <li class="trem ativo">
                         <p class="nome-trem">Trem 3</p>
-                        <p class="condicao">Manutenção</p>
-
+                        <p class="condicao">CONDIÇÃO:</p>
+                        <p class="status">Em atividade</p>
                     </li>
                     <li class="trem ativo">
                         <p class="nome-trem">Trem 4</p>
-                        <p class="condicao">Rodando</p>
-
+                        <p class="condicao">CONDIÇÃO:</p>
+                        <p class="status">Em atividade</p>
                     </li>
                 </ul>
             </div>
@@ -53,11 +61,12 @@
 
     <footer>
         <div id="footer-status">
-            <a href="informacao1.html">
-                <span>◀</span>
-                <span>Condição dos trens</span>
+            <a href="informacao-funcionario2.html">
+                <span>Status</span>
+                <span>▶</span>
             </a>
         </div>
+
         <div id="logoContainer2">
             <img src="../assets/images/treminicio.png" alt="Ferroviária Jatotrem" id="footer-logo">
             <h1 id="txtFerroviaria2">Ferroviária</h1>

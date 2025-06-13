@@ -74,6 +74,21 @@ h1 {
   max-width: 500px;
   box-sizing: border-box;
   margin-top: 20px;
+  color: white;
+}
+
+.opcoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px 20px; 
+  margin-top: 10px;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .maquinista-secao {
@@ -163,12 +178,14 @@ footer {
 .imagem-centralizada {
   text-align: center;
   margin-top: 20px;
+    border-radius: 12px; 
 }
 
 .imagem-centralizada img {
   width: 280px; 
   height: auto;
   border-radius: 10px;
+    border-radius: 12px; 
 }
 
 #font{
@@ -181,4 +198,21 @@ footer {
   align-items: center;
   font-size: 16px;
   font-weight: bold;
+}
+
+
+#botao_enviar {
+ padding: 10px 20px;
+  color: #ffffff;
+  background-color:#0066cc; 
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 321px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#botaozinho{
+  text-align: center;
 }
