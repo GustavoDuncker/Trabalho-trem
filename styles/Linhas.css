@@ -112,7 +112,6 @@ main {
   padding: 8px 12px;
   border-radius: 10px;
   transition: background-color 0.3s;
-  
 }
 .voltar a:hover {
   background-color: #0066cc;
