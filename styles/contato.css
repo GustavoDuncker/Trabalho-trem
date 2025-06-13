@@ -79,9 +79,9 @@ h1 {
 
 .opcoes {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* duas colunas */
-  gap: 10px 20px; /* espaço entre linhas e colunas */
-  justify-items: center; /* centraliza horizontalmente cada item */
+  grid-template-columns: 1fr 1fr; 
+  gap: 10px 20px; 
+  justify-items: center; 
   margin-top: 10px;
 }
 
