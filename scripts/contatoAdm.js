@@ -16,6 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     alert("Informações enviadas com sucesso!");
-    window.location.href = "inicioAdm.html"; // redireciona para sua página inicial
+    window.location.href = "inicioAdm.html"; 
   });
 });
