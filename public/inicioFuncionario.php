@@ -1,0 +1,58 @@
+<?php // inicioFuncionario.php ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/inicioFuncionario.css">
+    <link rel="icon" href="../assets/images/trem inicioo.png">
+    <script src="../scripts/sair.js"></script>
+    <link rel="icon" href="../assets/images/iconTrem.png" />
+    <title>JATOTREM Funcionários</title>
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="logo-container">
+      <h1 class="txtFerroviaria">F e r r o v i á r i a</h1>
+      <h2 class="txtJato">JATOTREM</h2>
+    </div>
+    </header>
+  <section class="cabecalho2">
+    <div class="pesquisa">
+      <input type="text" placeholder="Pesquisar" class="pesquisaInput"/>
+      <button onclick="sair()" id="buttonSair">SAIR</button>
+    </div>
+  </section>
+        <main>
+          <h1>Início</h1>
+          <section class="maquinista-secao">
+            <h2>MAQUINISTA</h2>
+            <div class="grid-menu">
+              <a href="MapaDeRede-Funcionario.php" class="menu-item">
+                <img class="imgMenu" src="../assets/images/mapaTrem.png" alt="Mapa da rede">
+                <span>Mapa da rede</span>
+              </a>
+              <a href="linhas-Funcionario.php" class="menu-item">
+                <img class="imgMenu" src="../assets/images/iconTrem.png" alt="Linhas">
+                <span>Linhas</span>
+              </a>
+              <a href="informacao-funcionario.php" class="menu-item">
+                <img class="imgMenu" src="../assets/images/iconInfo2.png" alt="Informações">
+                <span>Informações</span>
+              </a>
+              <a href="contato-funcionario.php" class="menu-item">
+                <img src="../assets/images/iconTelefone.png" alt="Contatos"> 
+                <span>Contatos</span>
+              </a>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <div class="logoContainer2">
+            <img src="../assets/images/treminicio.png" alt="Ferroviária Jatotrem" class="footer-logo">
+            <h1 class="txtFerroviaria2">F e r r o v i á r i a</h1>
+            <h2 class="txtJato2">JATOTREM</h2>
+          </div>
+        </footer>
+</body>
+</html>
