@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errorSenha = 'Senha inválida. A senha deve ter pelo menos 8 caracteres, um número, uma letra maiúscula e não conter o caractere ";".';
     } else {
     
-        header("Location: inicioAdm.html");
+        header("Location: inicioAdm.php");
         exit;
     }
 }
