@@ -1,3 +1,35 @@
+<?php
+
+include "banco/db.php";
+session_start();
+
+$msg = "";
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+    $user = $_POST["username"] ?? "";
+    $pass = $_POST["senha"] ?? "";
+
+    $stmt =$mysqli->prepare("SELECT pk, username, senha FROM usuarios WHERE username=? AND senha=?");
+    $stmt-> bind_param("ss", $user, $pass);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $dados = $result -> fetch_assoc();
+    $stmt->close();
+
+    if($dados){
+        $_SESSION["user_pk"] = $dados["pk"];
+        $_SESSION["username"] = $dados["username"];
+        header("Location: index.php");
+        exit;
+
+    }else{
+        $msg = "Usuário ou senha incorretos!";
+    }
+};
+
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +48,7 @@
         <h1 id="loginTxt">LOGIN ADMINISTRADOR</h1>
 
         <div id="box">
-            <form >
+            <form>
 
                 <div class="inputs">
                     <h3 class="input_elements">E-MAIL</h3>
