@@ -19,12 +19,12 @@
             </div>
             <br>
             <div class="inputs">
-                <a href="inicio.html">
+                <a href="index.php">
                 <input type="button" value="Acessar conta" class="input_elements" id="button_access">
             </a>
             </div>
             <div class="inputs">
-                <a href="login.html">
+                <a href="../index.php">
                     <input type="button" value="Voltar para o login" class="input_elements" id="button_login">
                 </a>
             </div>

@@ -20,7 +20,7 @@
   <section class="cabecalho2">
     <div class="pesquisa">
       <input type="text" placeholder="Pesquisar" class="pesquisaInput"/>
-      <button onclick="sair()" id="buttonSair">SAIR</button>
+      <button onclick="../index.ph" id="buttonSair">SAIR</button>
     </div>
   </section>
         <main>

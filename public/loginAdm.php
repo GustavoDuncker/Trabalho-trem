@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JATOTREM - Login</title>
     <link rel="stylesheet" href="../styles/loginAdm_style.css">
-    <script src="../scripts/loginAdm.js"></script>
+    <script src="../scripts/loginAdm.php"></script>
 </head>
 
 <body id="body_login">
