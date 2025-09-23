@@ -1,4 +1,4 @@
-<?php // informacao1.php ?>
+<?php?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

@@ -1,4 +1,4 @@
-<?php // informacao-funcionario2.php ?>
+<?php?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
