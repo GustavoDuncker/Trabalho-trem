@@ -1,15 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-
-$conn = new mysqli($servername, $username, $password);
-
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-}
-
-$sql = <<<SQL
 CREATE DATABASE IF NOT EXISTS smartferrovia;
 USE smartferrovia;
 
@@ -140,13 +128,3 @@ CREATE TABLE IF NOT EXISTS AlertaUsuario (
     FOREIGN KEY (idAlerta) REFERENCES Alerta(idAlerta),
     FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
 );
-SQL;
-
-if ($conn->multi_query($sql)) {
-    echo "Banco de dados e tabelas criados com sucesso.";
-} else {
-    echo "Erro ao criar banco/tabelas: " . $conn->error;
-}
-
-$conn->close();
-?>
