@@ -40,7 +40,7 @@
 
             </form>
         </div>
-        <p><a href="RecuperarSenha.html" id="esqueci">Esqueci minha senha</a></p>
+        <p><a href="RecuperarSenha.php" id="esqueci">Esqueci minha senha</a></p>
     </main>
 
 

@@ -65,7 +65,7 @@
 
     <footer>
         <div id="footer-status">
-            <a href="informacao1.html" id="txtCondicao">
+            <a href="informacao1.php" id="txtCondicao">
                 <span>◀</span>
                 <span>Condição dos trens</span>
             </a>

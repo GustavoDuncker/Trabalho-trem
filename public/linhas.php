@@ -32,7 +32,7 @@
 
     <main>
         <div class="voltar">
-            <a href="inicioAdm.html">◀ Voltar</a>
+            <a href="inicioAdm.php">◀ Voltar</a>
         </div>
         <section class="informacoes">
             <div class="logo-informacoes">
@@ -98,7 +98,7 @@
     <main>
   
     <div class="voltar">
-      <a href="linhas2.html"> ▶ Conferir linhas</a>
+      <a href="linhas2.php"> ▶ Conferir linhas</a>
   </div>
     </main>
     <footer>

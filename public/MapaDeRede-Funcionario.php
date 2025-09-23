@@ -35,7 +35,7 @@
   <main>
     
     <div class="voltar">
-      <a href="inicioFuncionario.html"> ◀ Voltar</a>
+      <a href="inicioFuncionario.php"> ◀ Voltar</a>
     </div>
 
    

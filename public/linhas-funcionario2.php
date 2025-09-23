@@ -33,7 +33,7 @@
 
     <main>
         <div class="voltar">
-            <a href="linhas-Funcionario.html">◀ Voltar</a>
+            <a href="linhas-Funcionario.php">◀ Voltar</a>
         </div>
         <section class="informacoes">
             <div class="logo-informacoes">

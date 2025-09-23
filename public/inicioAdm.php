@@ -30,26 +30,26 @@
           <section class="maquinista-secao">
             <h2>ADMINISTRADOR</h2>
             <div class="grid-menu">
-              <a href="MapaDeRede.html" class="menu-item">
+              <a href="MapaDeRede.php" class="menu-item">
                 <img class="imgMenu" src="../assets/images/mapaTrem.png" alt="Mapa da rede">
                 <span>Mapa da rede</span>
               </a>
-              <a href="../public/linhas.html" class="menu-item">
+              <a href="../public/linhas.php" class="menu-item">
                 <img class="imgMenu" src="../assets/images/iconTrem.png" alt="Linhas">
                 <span>Linhas</span>
               </a>
-              <a href="../public/informacao1.html" class="menu-item">
+              <a href="../public/informacao1.php" class="menu-item">
                 <img class="imgMenu" src="../assets/images/iconInfo2.png" alt="Informações">
                 <span>Informações</span>
               </a>
-              <a href="../public/contato.html" class="menu-item">
+              <a href="../public/contato.php" class="menu-item">
                 <img src="../assets/images/iconTelefone.png" alt="Contatos"> 
                 <span>Contatos</span>
               </a>
               
 
             </div>
-            <a href="cadastroFuncionarios.html">
+            <a href="cadastroFuncionarios.php">
                 <div id="divCadastro">
                     <h2 id="txtCadastro">CADASTRAR FUNCIONÁRIOS</h2>
                 </div>
@@ -66,4 +66,4 @@
           </div>
         </footer>
       </body>
-</html> 
+</html>
