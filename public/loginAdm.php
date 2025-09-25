@@ -58,13 +58,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
                 <div class="inputs">
                     <h3 class="input_elements">E-MAIL</h3>
-                    <input type="email" id="input1" class="input_elements" class="emailSenha" placeholder="Digite seu email">
+                    <input type="email" id="input1" class="input_elements" class="emailSenha" name="email" placeholder="Digite seu email">
                     <div class="error" id="errorEmail"></div>
                 </div>
 
                 <div class="inputs">
                     <h3 class="input_elements">SENHA</h3>
-                    <input type="password" id="input2" class="input_elements" class="emailSenha" placeholder="Digite sua senha">
+                    <input type="password" id="input2" class="input_elements" class="emailSenha" name="senha" placeholder="Digite sua senha">
                     <div class="error" id="errorSenha"></div>
                 </div>
 
