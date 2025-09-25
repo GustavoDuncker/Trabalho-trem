@@ -1,6 +1,6 @@
 <?php
 
-include "banco/db.php";
+include "./banco/db.php";
 session_start();
 
 $msg = "";
