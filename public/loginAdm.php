@@ -56,8 +56,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 <?php endif; ?>
 
                 <div class="inputs">
-                    <h3 class="input_elements">E-MAIL</h3>
-                    <input type="email" id="input1" class="input_elements" class="emailSenha" placeholder="Digite seu email">
+                    <h3 class="input_elements">NOME</h3>
+                    <input type="email" id="input1" class="input_elements" class="emailSenha" placeholder="Digite seu nome">
                     <div class="error" id="errorEmail"></div>
                 </div>
 
