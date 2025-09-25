@@ -39,6 +39,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 </head>
 
 <body id="body_login">
+
     <header id="cabecalho_login">
         <h1 id="tituloJato">JATOTREM</h1>
         <img src="../assets/images/treminicio.png" alt="" id="img_header">
@@ -49,6 +50,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         <div id="box">
             <form method="POST">
+
+                <?php if($msg): ?> 
+                    <p> <?= $msg ?> </p> 
+                <?php endif; ?>
 
                 <div class="inputs">
                     <h3 class="input_elements">E-MAIL</h3>
@@ -63,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 </div>
 
                 <div class="inputs">
-                    <input type="button" value="Acessar conta" onclick="valida()" class="input_elements" id="button_access">
+                    <input type="button" value="Acessar conta" class="input_elements" id="button_access">
                 </div>
 
 
