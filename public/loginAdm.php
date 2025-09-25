@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         <h1 id="loginTxt">LOGIN ADMINISTRADOR</h1>
 
         <div id="box">
-            <form>
+            <form method="POST">
 
                 <div class="inputs">
                     <h3 class="input_elements">E-MAIL</h3>
