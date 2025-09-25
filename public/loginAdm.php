@@ -5,10 +5,10 @@ session_start();
 
 $msg = "";
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $user = $_POST["username"] ?? "";
+    $user = $_POST["nome"] ?? "";
     $pass = $_POST["senha"] ?? "";
 
-    $stmt =$mysqli->prepare("SELECT pk, username, senha FROM usuarios WHERE username=? AND senha=?");
+    $stmt =$mysqli->prepare("SELECT idUsuario, nome, senha FROM usuario WHERE nome=? AND senha=?");
     $stmt-> bind_param("ss", $user, $pass);
     $stmt->execute();
 
@@ -17,9 +17,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $stmt->close();
 
     if($dados){
-        $_SESSION["user_pk"] = $dados["pk"];
-        $_SESSION["username"] = $dados["username"];
-        header("Location: index.php");
+        $_SESSION["user_id"] = $dados["idusuario"];
+        $_SESSION["username"] = $dados["nome"];
+        header("Location: inicioAdm.php");
         exit;
 
     }else{
