@@ -5,10 +5,10 @@ session_start();
 
 $msg = "";
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $user = $_POST["nome"] ?? "";
+    $user = $_POST["email"] ?? "";
     $pass = $_POST["senha"] ?? "";
 
-    $stmt =$mysqli->prepare("SELECT idUsuario, nome, senha FROM usuario WHERE nome=? AND senha=?");
+    $stmt =$mysqli->prepare("SELECT idUsuario, email, senha FROM usuario WHERE email=? AND senha=?");
     $stmt-> bind_param("ss", $user, $pass);
     $stmt->execute();
 
@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     if($dados){
         $_SESSION["user_id"] = $dados["idusuario"];
-        $_SESSION["username"] = $dados["nome"];
+        $_SESSION["useremail"] = $dados["email"];
         header("Location: inicioAdm.php");
         exit;
 
@@ -56,8 +56,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 <?php endif; ?>
 
                 <div class="inputs">
-                    <h3 class="input_elements">NOME</h3>
-                    <input type="email" id="input1" class="input_elements" class="emailSenha" placeholder="Digite seu nome">
+                    <h3 class="input_elements">E-MAIL</h3>
+                    <input type="email" id="input1" class="input_elements" class="emailSenha" placeholder="Digite seu email">
                     <div class="error" id="errorEmail"></div>
                 </div>
 
