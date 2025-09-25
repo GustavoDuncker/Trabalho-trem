@@ -1,6 +1,7 @@
 <?php
 
-include "./banco/db.php";
+include "../banco/db.php";
+
 session_start();
 
 $msg = "";
@@ -68,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 </div>
 
                 <div class="inputs">
-                    <input type="button" value="Acessar conta" class="input_elements" id="button_access">
+                    <button type="submit">Entrar</button>
                 </div>
 
 
