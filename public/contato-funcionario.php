@@ -63,6 +63,8 @@
         <input id="email" type="email" placeholder="Digite seu e-mail" />
         <label for="telefone">TELEFONE</label>
         <input id="telefone" type="tel" placeholder="Digite seu telefone" />
+        <label for="funcao">FUNÇÃO</label>
+        <input id="funcao" type="text" placeholder="Digite sua função" />
       </div>
       <div class="coluna-direita">
         <label for="mensagem">MENSAGEM</label>

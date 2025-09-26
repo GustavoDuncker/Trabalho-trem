@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $user = $_POST["email"] ?? "";
     $pass = $_POST["senha"] ?? "";
 
-    $stmt =$conn->prepare("SELECT idUsuario, email, senha FROM usuario WHERE email=? AND senha=?");
+    $stmt =$conn->prepare("SELECT idUsuario, email, senha, funcao FROM usuario WHERE email=? AND senha=?");
     $stmt-> bind_param("ss", $user, $pass);
     $stmt->execute();
 
@@ -20,12 +20,24 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if($dados){
         $_SESSION["user_id"] = $dados["idusuario"];
         $_SESSION["useremail"] = $dados["email"];
-        header("Location: inicioAdm.php");
+        $_SESSION["funcao"] = $dados["funcao"];
+
+
+        if($_SESSION["funcao"] == 'admin'){
+             header("Location: inicioAdm.php");
+            exit;
+        }else{
+            header("Location: inicioFuncionario.php");
+            session_destroy();
+        }
+
         exit;
 
     }else{
         $msg = "Usuário ou senha incorretos!";
     }
+
+
 };
 
 
