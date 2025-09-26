@@ -1,12 +1,18 @@
 CREATE DATABASE IF NOT EXISTS smartferrovia;
 USE smartferrovia;
 
+CREATE TABLE PerfilUsuario (
+    idPerfil INT PRIMARY KEY,
+    nomePerfil VARCHAR(50) NOT NULL
+);
+
 CREATE TABLE Usuario (
-    idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+    idUsuario INT PRIMARY KEY,
     nome VARCHAR(100),
     email VARCHAR(100) UNIQUE,
     senha VARCHAR(100),
-    funcao ENUM('maquinista', 'administrador') NOT NULL
+    idPerfil INT,
+    FOREIGN KEY (idPerfil) REFERENCES PerfilUsuario(idPerfil)
 );
 
 CREATE TABLE Estacao (

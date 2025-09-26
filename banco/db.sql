@@ -1,28 +1,22 @@
 CREATE DATABASE IF NOT EXISTS smartferrovia;
 USE smartferrovia;
 
-CREATE TABLE IF NOT EXISTS PerfilUsuario (
-    idPerfil INT PRIMARY KEY,
-    nomePerfil VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS Usuario (
-    idUsuario INT PRIMARY KEY,
+CREATE TABLE Usuario (
+    idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     email VARCHAR(100) UNIQUE,
     senha VARCHAR(100),
-    idPerfil INT,
-    FOREIGN KEY (idPerfil) REFERENCES PerfilUsuario(idPerfil)
+    funcao ENUM('maquinista', 'administrador') NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Estacao (
+CREATE TABLE Estacao (
     idEstacao INT PRIMARY KEY,
     nome VARCHAR(100),
     cidade VARCHAR(100),
     estado VARCHAR(50)
 );
 
-CREATE TABLE IF NOT EXISTS Trem (
+CREATE TABLE Trem (
     idTrem INT PRIMARY KEY,
     identificacao VARCHAR(50) UNIQUE,
     modelo VARCHAR(50),
@@ -30,7 +24,7 @@ CREATE TABLE IF NOT EXISTS Trem (
     energiaPorKm DECIMAL(10,2)
 );
 
-CREATE TABLE IF NOT EXISTS Sensor (
+CREATE TABLE Sensor (
     idSensor INT PRIMARY KEY,
     tipoSensor VARCHAR(50), 
     localInstalacao VARCHAR(100), 
@@ -40,7 +34,7 @@ CREATE TABLE IF NOT EXISTS Sensor (
     FOREIGN KEY (idEstacao) REFERENCES Estacao(idEstacao)
 );
 
-CREATE TABLE IF NOT EXISTS Telemetria (
+CREATE TABLE Telemetria (
     idTelemetria INT PRIMARY KEY,
     idTrem INT,
     velocidade DECIMAL(5,2),
@@ -50,12 +44,12 @@ CREATE TABLE IF NOT EXISTS Telemetria (
     FOREIGN KEY (idTrem) REFERENCES Trem(idTrem)
 );
 
-CREATE TABLE IF NOT EXISTS Rota (
+CREATE TABLE Rota (
     idRota INT PRIMARY KEY,
     nome VARCHAR(100)
 );
 
-CREATE TABLE IF NOT EXISTS Segmento (
+CREATE TABLE Segmento (
     idSegmento INT PRIMARY KEY,
     idRota INT,
     ordem INT,
@@ -66,7 +60,7 @@ CREATE TABLE IF NOT EXISTS Segmento (
     FOREIGN KEY (idEstacaoDestino) REFERENCES Estacao(idEstacao)
 );
 
-CREATE TABLE IF NOT EXISTS Viagem (
+CREATE TABLE Viagem (
     idViagem INT PRIMARY KEY,
     idTrem INT,
     idRota INT,
@@ -77,13 +71,13 @@ CREATE TABLE IF NOT EXISTS Viagem (
     FOREIGN KEY (idRota) REFERENCES Rota(idRota)
 );
 
-CREATE TABLE IF NOT EXISTS IndicadorIntegridade (
+CREATE TABLE IndicadorIntegridade (
     idIndicador INT PRIMARY KEY,
     nome VARCHAR(100),
     unidade VARCHAR(20)
 );
 
-CREATE TABLE IF NOT EXISTS MonitoramentoIntegridade (
+CREATE TABLE MonitoramentoIntegridade (
     idMonitoramento INT PRIMARY KEY,
     idTrem INT,
     idIndicador INT,
@@ -93,7 +87,7 @@ CREATE TABLE IF NOT EXISTS MonitoramentoIntegridade (
     FOREIGN KEY (idIndicador) REFERENCES IndicadorIntegridade(idIndicador)
 );
 
-CREATE TABLE IF NOT EXISTS OrdemServico (
+CREATE TABLE OrdemServico (
     idOrdem INT PRIMARY KEY,
     idTrem INT,
     descricao TEXT,
@@ -103,7 +97,7 @@ CREATE TABLE IF NOT EXISTS OrdemServico (
     FOREIGN KEY (idTrem) REFERENCES Trem(idTrem)
 );
 
-CREATE TABLE IF NOT EXISTS RelatorioMensal (
+CREATE TABLE RelatorioMensal (
     idRelatorio INT PRIMARY KEY,
     mes INT,
     ano INT,
@@ -113,7 +107,7 @@ CREATE TABLE IF NOT EXISTS RelatorioMensal (
     custoManutencaoMedio DECIMAL(10,2)
 );
 
-CREATE TABLE IF NOT EXISTS Alerta (
+CREATE TABLE Alerta (
     idAlerta INT PRIMARY KEY,
     tipo VARCHAR(50),
     mensagem TEXT,
@@ -121,7 +115,7 @@ CREATE TABLE IF NOT EXISTS Alerta (
     criticidade VARCHAR(20) 
 );
 
-CREATE TABLE IF NOT EXISTS AlertaUsuario (
+CREATE TABLE AlertaUsuario (
     idAlerta INT,
     idUsuario INT,
     PRIMARY KEY (idAlerta, idUsuario),
