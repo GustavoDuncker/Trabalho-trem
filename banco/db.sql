@@ -6,7 +6,10 @@ CREATE TABLE Usuario (
     nome VARCHAR(100),
     email VARCHAR(100) UNIQUE,
     senha VARCHAR(100),
-    funcao ENUM('maquinista', 'administrador') NOT NULL
+    funcao ENUM('maquinista', 'administrador') NOT NULL,
+    cpf VARCHAR(14) UNIQUE,
+    contato VARCHAR(20),
+    endereco VARCHAR(200)
 );
 
 CREATE TABLE Estacao (
