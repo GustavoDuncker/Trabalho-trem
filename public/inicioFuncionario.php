@@ -22,10 +22,10 @@ session_start();
     </div>
     </header>
   <section class="cabecalho2">
-    <div class="pesquisa">
-      <input type="text" placeholder="Pesquisar" class="pesquisaInput"/>
-      <a href="../scripts/loginMaquinista.php" id="linkSair">Sair</a>
-    </div>
+        <div class="pesquisa">
+            <input type="text" placeholder="Pesquisar">
+            <a href="logout.php?logout=1"><button id="buttonSair">SAIR</button></a>
+        </div>
   </section>
         <main>
           <h1>Início</h1>
