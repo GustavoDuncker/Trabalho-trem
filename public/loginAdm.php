@@ -59,7 +59,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     </header>
 
     <main>
-        <h1 id="loginTxt">LOGIN ADMINISTRADOR</h1>
+        <h1 id="loginTxt">LOGIN</h1>
 
         <div id="box">
             <form method="POST">
