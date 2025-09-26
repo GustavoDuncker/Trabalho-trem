@@ -6,11 +6,11 @@ session_start();
 
 $msg = "";
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $user = $_POST["email"] ?? "";
+    $email = $_POST["email"] ?? "";
     $pass = $_POST["senha"] ?? "";
 
     $stmt =$conn->prepare("SELECT idUsuario, email, senha, funcao FROM usuario WHERE email=? AND senha=?");
-    $stmt-> bind_param("ss", $user, $pass);
+    $stmt-> bind_param("ss", $email, $pass);
     $stmt->execute();
 
     $result = $stmt->get_result();
@@ -18,8 +18,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $stmt->close();
 
     if($dados){
-        $_SESSION["user_id"] = $dados["idusuario"];
-        $_SESSION["useremail"] = $dados["email"];
+        $_SESSION["id"] = $dados["idUsuario"];
+        $_SESSION["email"] = $dados["email"];
         $_SESSION["funcao"] = $dados["funcao"];
 
 
