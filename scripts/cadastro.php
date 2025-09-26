@@ -83,8 +83,8 @@ function validaCadastro($email, $senha, $nome, $funcao, $numero, $cpf, $endereco
     }
     $temNumeroContato = preg_match('/[0-9]/', $contato);
     $temComprimentoMinimoContato = strlen($contato) == 9;
-    $temLetraMaiusculaContato = preg_match('/[A-Z]/', $contato);
-    $temLetraMinusculaContato = preg_match('/[a-z]/', $contato);
+    $temLetraMaiusculaContato = preg_match('/[A-Z]/', $contato);  
+      $temLetraMinusculaContato = preg_match('/[a-z]/', $contato);
 
     
     if (!$emailValido) {

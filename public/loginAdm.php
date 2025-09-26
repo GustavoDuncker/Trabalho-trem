@@ -1,14 +1,15 @@
 <?php
 
-include "./banco/db.php";
+include "../banco/db.php";
+
 session_start();
 
 $msg = "";
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $user = $_POST["username"] ?? "";
+    $user = $_POST["email"] ?? "";
     $pass = $_POST["senha"] ?? "";
 
-    $stmt =$mysqli->prepare("SELECT pk, username, senha FROM usuarios WHERE username=? AND senha=?");
+    $stmt =$conn->prepare("SELECT idUsuario, email, senha, funcao FROM usuario WHERE email=? AND senha=?");
     $stmt-> bind_param("ss", $user, $pass);
     $stmt->execute();
 
@@ -17,14 +18,26 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $stmt->close();
 
     if($dados){
-        $_SESSION["user_pk"] = $dados["pk"];
-        $_SESSION["username"] = $dados["username"];
-        header("Location: index.php");
+        $_SESSION["user_id"] = $dados["idusuario"];
+        $_SESSION["useremail"] = $dados["email"];
+        $_SESSION["funcao"] = $dados["funcao"];
+
+
+        if($_SESSION["funcao"] == 'admin'){
+             header("Location: inicioAdm.php");
+            exit;
+        }else{
+            header("Location: inicioFuncionario.php");
+            session_destroy();
+        }
+
         exit;
 
     }else{
         $msg = "Usuário ou senha incorretos!";
     }
+
+
 };
 
 
@@ -39,6 +52,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 </head>
 
 <body id="body_login">
+
     <header id="cabecalho_login">
         <h1 id="tituloJato">JATOTREM</h1>
         <img src="../assets/images/treminicio.png" alt="" id="img_header">
@@ -50,20 +64,24 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         <div id="box">
             <form method="POST">
 
+                <?php if($msg): ?> 
+                    <p> <?= $msg ?> </p> 
+                <?php endif; ?>
+
                 <div class="inputs">
                     <h3 class="input_elements">E-MAIL</h3>
-                    <input type="email" id="input1" class="input_elements" class="emailSenha" placeholder="Digite seu email">
+                    <input type="email" id="input1" class="input_elements" class="emailSenha" name="email" placeholder="Digite seu email">
                     <div class="error" id="errorEmail"></div>
                 </div>
 
                 <div class="inputs">
                     <h3 class="input_elements">SENHA</h3>
-                    <input type="password" id="input2" class="input_elements" class="emailSenha" placeholder="Digite sua senha">
+                    <input type="password" id="input2" class="input_elements" class="emailSenha" name="senha" placeholder="Digite sua senha">
                     <div class="error" id="errorSenha"></div>
                 </div>
 
                 <div class="inputs">
-                    <input type="button" value="Acessar conta" onclick="valida()" class="input_elements" id="button_access">
+                    <button type="submit">Entrar</button>
                 </div>
 
 
