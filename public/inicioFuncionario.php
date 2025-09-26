@@ -20,7 +20,7 @@
   <section class="cabecalho2">
     <div class="pesquisa">
       <input type="text" placeholder="Pesquisar" class="pesquisaInput"/>
-      <button onclick="../index.ph" id="buttonSair">SAIR</button>
+      <a href="../scripts/loginMaquinista.php" id="linkSair">Sair</a>
     </div>
   </section>
         <main>
