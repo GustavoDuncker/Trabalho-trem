@@ -122,3 +122,10 @@ CREATE TABLE AlertaUsuario (
     FOREIGN KEY (idAlerta) REFERENCES Alerta(idAlerta),
     FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
 );
+
+INSERT INTO Usuario (nome, email, senha, funcao) 
+VALUES ('Administrador', 'adm@gmail.com', 'admin123', 'administrador');
+
+INSERT INTO Usuario (nome, email, senha, funcao) 
+VALUES ('Maquinista', 'maq@gmail.com', 'maq123', 'maquinista');
+

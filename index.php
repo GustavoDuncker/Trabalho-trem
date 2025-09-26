@@ -25,10 +25,7 @@ session_start();
 
         <div class="button-container">
             <button class="login">
-                <a href="public/loginMaquinista.php" id="link_loginMaquinista"><b>MAQUINISTA</b></a>
-            </button>
-            <button class="login">
-                <a href="public/loginAdm.php" id="link_loginAdm"><b>ADMINISTRADOR</b></a>
+                <a href="public/loginAdm.php" id="link_loginAdm"><b>ENTRAR</b></a>
             </button>
         </div>
     </main>

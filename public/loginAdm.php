@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $_SESSION["funcao"] = $dados["funcao"];
 
 
-        if($_SESSION["funcao"] == 'admin'){
+        if($_SESSION["funcao"] == 'administrador'){
              header("Location: inicioAdm.php");
             exit;
         }else{
