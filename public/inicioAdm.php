@@ -69,6 +69,7 @@ session_start();
             <h1 class="txtFerroviaria2">F e r r o v i á r i a</h1>
             <h2 class="txtJato2">JATOTREM</h2>
           </div>
+          <p><a href="logout.php?logout=1">Sair</a></p>
         </footer>
       </body>
 </html>
