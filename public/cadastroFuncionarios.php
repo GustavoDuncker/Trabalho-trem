@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
         }else{
             $register_msg = "Erro ao cadastrar novo usuário.";
         };
-
+        
         $stmt->close();
     }else{
         $register_msg = "Preencha todos os campos.";

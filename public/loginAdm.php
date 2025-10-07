@@ -9,34 +9,32 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $email = $_POST["email"] ?? "";
     $pass = $_POST["senha"] ?? "";
 
-    $stmt =$conn->prepare("SELECT idUsuario, email, senha, funcao FROM usuario WHERE email=? AND senha=?");
-    $stmt-> bind_param("ss", $email, $pass);
+    // Busca apenas pelo e-mail
+    $stmt = $conn->prepare("SELECT idUsuario, email, senha, funcao FROM usuario WHERE email=?");
+    $stmt->bind_param("s", $email);
     $stmt->execute();
 
     $result = $stmt->get_result();
-    $dados = $result -> fetch_assoc();
+    $dados = $result->fetch_assoc();
     $stmt->close();
 
-    if($dados){
+    // Verifica se encontrou usuário e se a senha está correta
+    if($dados && password_verify($pass, $dados["senha"])){
         $_SESSION["id"] = $dados["idUsuario"];
         $_SESSION["email"] = $dados["email"];
         $_SESSION["funcao"] = $dados["funcao"];
 
-
         if($_SESSION["funcao"] == 'administrador'){
-             header("Location: inicioAdm.php");
+            header("Location: inicioAdm.php");
             exit;
         }else{
             header("Location: inicioFuncionario.php");
             session_destroy();
         }
-
         exit;
-
     }else{
         $msg = "Usuário ou senha incorretos!";
     }
-
 
 };
 
