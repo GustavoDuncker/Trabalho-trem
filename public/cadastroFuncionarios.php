@@ -18,9 +18,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
     $new_cont = $_POST['contato'] ?? "";
     $novo_email = $_POST['novo_email'] ?? "";
     $nova_senha = $_POST['nova_senha'] ?? "";
+    $senhaHash = password_hash($nova_senha, PASSWORD_DEFAULT);
     if($novo_email && $nova_senha){
         $stmt = $conn -> prepare("INSERT INTO usuario (nome, funcao, cpf, endereco, contato, email, senha) VALUES (?,?,?, ?, ?, ?, ?)");
-        $stmt -> bind_param("sssssss", $new_user, $new_func , $new_cpf, $new_ende, $new_cont, $novo_email, $nova_senha,);
+        $stmt -> bind_param("sssssss", $new_user, $new_func , $new_cpf, $new_ende, $new_cont, $novo_email, $senhaHash,);
         
         if($stmt->execute()) {
             $register_msg = "Usuário cadastrado com sucesso!";
