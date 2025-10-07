@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
         }else{
             $register_msg = "Erro ao cadastrar novo usuário.";
         };
-        
+
         $stmt->close();
     }else{
         $register_msg = "Preencha todos os campos.";
@@ -55,6 +55,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
         </div>
     </header>
     <main>
+        <?php if($register_msg): ?>
+            <div style="color: red; margin-bottom: 10px;"><?= $register_msg ?></div>
+        <?php endif; ?>
         <form method="post">
 
             <div class="entradas">
