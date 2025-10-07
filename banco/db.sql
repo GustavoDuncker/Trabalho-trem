@@ -5,7 +5,7 @@ CREATE TABLE Usuario (
     idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     email VARCHAR(100) UNIQUE,
-    senha VARCHAR(100),
+    senha VARCHAR(255),
     funcao ENUM('maquinista', 'administrador') NOT NULL,
     cpf VARCHAR(14) UNIQUE,
     contato VARCHAR(20),
@@ -126,9 +126,7 @@ CREATE TABLE AlertaUsuario (
     FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
 );
 
-INSERT INTO Usuario (nome, email, senha, funcao) 
-VALUES ('Administrador', 'adm@gmail.com', 'admin123', 'administrador');
-
-INSERT INTO Usuario (nome, email, senha, funcao) 
-VALUES ('Maquinista', 'maq@gmail.com', 'maq123', 'maquinista');
-
+INSERT INTO Usuario (nome, email, senha, funcao)
+VALUES 
+('Administrador', 'adm@gmail.com', '$2y$10$fmJWPoBqb1QBR/mgnRUuH.heyBzHL3wQo3zZZtepYm9hr9giH0Ia6', 'administrador'),
+('Maquinista', 'maq@gmail.com', '$2y$10$hQuYrSoTVR.t.V3xEgZRXuP9uiZOj9l2Gj7K7xnrPpMBOo3LpOv2a', 'maquinista');
