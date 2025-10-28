@@ -88,7 +88,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
             <div class="entradas">
                 <div class="nomeEntradas">CEP</div>
                 <div class="error" id="errorCEP"></div>
-                <input class="boxEntradas" value="<?php echo $json_data->cep?>" id="inputCEP" name="cep"></input>
+                <input class="boxEntradas" value="<?php echo $json_data->cep?>" onblur="" id="inputCEP" name="cep"></input>
             </div>
             <div class="entradas">
                 <div class="nomeEntradas">Rua</div>
