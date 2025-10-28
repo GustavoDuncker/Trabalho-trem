@@ -1,5 +1,5 @@
 <?php
-function validaCadastro($email, $senha, $nome, $funcao, $numero, $cpf, $endereco, $contato) {
+function validaCadastro($email, $senha, $nome, $funcao, $numero, $cpf, $cep, $rua, $numRua, $cidade, $estado, $contato) {
     $invalidoEmail = array(' ', '!', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~');
     $invalido = array('!', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~');
 
@@ -65,14 +65,6 @@ function validaCadastro($email, $senha, $nome, $funcao, $numero, $cpf, $endereco
     $temLetraMinusculaCpf = preg_match('/[a-z]/', $cpf);
 
     
-    $possuiInvalidoEndereco = false;
-    foreach ($invalido as $char) {
-        if (strpos($endereco, $char) !== false) {
-            $possuiInvalidoEndereco = true;
-            break;
-        }
-    }
-
     
     $possuiInvalidoContato = false;
     foreach ($invalido as $char) {
@@ -86,6 +78,63 @@ function validaCadastro($email, $senha, $nome, $funcao, $numero, $cpf, $endereco
     $temLetraMaiusculaContato = preg_match('/[A-Z]/', $contato);  
       $temLetraMinusculaContato = preg_match('/[a-z]/', $contato);
 
+    $possuiInvalidoCep = false;
+    foreach ($invalido as $char) {
+        if (strpos($cep, $char) !== false) {
+            $possuiInvalidoCep = true;
+            break;
+        }
+    }
+    $cepNumeros = preg_replace('/\D/', '', $cep);
+    $temComprimentoCep = strlen($cepNumeros) == 8;
+    $cepApenasNumeros = !preg_match('/[A-Za-z]/', $cep);
+
+    $possuiInvalidoRua = false;
+    foreach ($invalido as $char) {
+        if (strpos($rua, $char) !== false) {
+            $possuiInvalidoRua = true;
+            break;
+        }
+    }
+    $temNumeroNaRua = preg_match('/[0-9]/', $rua);
+    $temTamanhoRua = strlen(trim($rua)) >= 2;
+
+    $possuiInvalidoNumRua = false;
+    foreach ($invalido as $char) {
+        if (strpos($numRua, $char) !== false) {
+            $possuiInvalidoNumRua = true;
+            break;
+        }
+    }
+    $numRuaApenasNumeros = preg_match('/^[0-9]+$/', $numRua);
+
+    $possuiInvalidoCidade = false;
+    foreach ($invalido as $char) {
+        if (strpos($cidade, $char) !== false) {
+            $possuiInvalidoCidade = true;
+            break;
+        }
+    }
+    $temNumeroCidade = preg_match('/[0-9]/', $cidade);
+    $temTamanhoCidade = strlen(trim($cidade)) >= 2;
+
+    $possuiInvalidoEstado = false;
+    foreach ($invalido as $char) {
+        if (strpos($estado, $char) !== false) {
+            $possuiInvalidoEstado = true;
+            break;
+        }
+    }
+    $temNumeroEstado = preg_match('/[0-9]/', $estado);
+    $temTamanhoEstado = strlen(trim($estado)) >= 2;
+
+    $possuiInvalidoEndereco = (
+        $possuiInvalidoCep || !$temComprimentoCep || !$cepApenasNumeros ||
+        $possuiInvalidoRua || $temNumeroNaRua || !$temTamanhoRua ||
+        $possuiInvalidoNumRua || !$numRuaApenasNumeros ||
+        $possuiInvalidoCidade || $temNumeroCidade || !$temTamanhoCidade ||
+        $possuiInvalidoEstado || $temNumeroEstado || !$temTamanhoEstado
+    );
     
     if (!$emailValido) {
         return "Email inválido. Por favor, insira um email válido.";

@@ -14,14 +14,18 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
     $new_user = $_POST['nome'] ?? "";
     $new_func = $_POST['funcao'] ?? "";
     $new_cpf = $_POST['cpf'] ?? "";
-    $new_ende = $_POST['endereco'] ?? "";
+    $new_cep = $_POST['cep'] ?? "";
+    $new_rua = $_POST['rua'] ?? "";
+    $new_numRua = $_POST['numRua'] ?? "";
+    $new_cidade = $_POST['cidade'] ?? "";
+    $new_estado = $_POST['estado'] ?? "";
     $new_cont = $_POST['contato'] ?? "";
     $novo_email = $_POST['novo_email'] ?? "";
     $nova_senha = $_POST['nova_senha'] ?? "";
     $senhaHash = password_hash($nova_senha, PASSWORD_DEFAULT);
     if($novo_email && $nova_senha){
-        $stmt = $conn -> prepare("INSERT INTO usuario (nome, funcao, cpf, endereco, contato, email, senha) VALUES (?,?,?, ?, ?, ?, ?)");
-        $stmt -> bind_param("sssssss", $new_user, $new_func , $new_cpf, $new_ende, $new_cont, $novo_email, $senhaHash,);
+        $stmt = $conn -> prepare("INSERT INTO usuario (nome, funcao, cpf, cep, rua, numRua, cidade, estado, contato, email, senha) VALUES (?,?,?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt -> bind_param("sssssss", $new_user, $new_func , $new_cpf, $new_cep, $new_rua, $new_numRua, $new_cidade, $new_estado, $new_cont, $novo_email, $senhaHash,);
         
         if($stmt->execute()) {
             $register_msg = "Usuário cadastrado com sucesso!";

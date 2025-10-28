@@ -9,7 +9,11 @@ CREATE TABLE Usuario (
     funcao ENUM('maquinista', 'administrador') NOT NULL,
     cpf VARCHAR(14) UNIQUE,
     contato VARCHAR(20),
-    endereco VARCHAR(200)
+    cep VARCHAR(10),
+    rua VARCHAR(100),
+    numRua VARCHAR(10),
+    cidade VARCHAR(50),
+    estado VARCHAR(50)
 );
 
 CREATE TABLE Estacao (
