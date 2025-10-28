@@ -1,6 +1,9 @@
 <?php
 
+include "../scripts/pegaCep.php";
 include "../banco/db.php";
+
+$json_data = pegarEndereco();
 
 session_start();
 
@@ -80,17 +83,17 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
             <div class="entradas">
                 <div class="nomeEntradas">CPF</div>
                 <div class="error" id="errorCpf"></div>
-                <input class="boxEntradas" id="inputCpf" name="cpf"></input>
+                <input class="boxEntradas"  id="inputCpf" name="cpf"></input>
             </div>
             <div class="entradas">
                 <div class="nomeEntradas">CEP</div>
                 <div class="error" id="errorCEP"></div>
-                <input class="boxEntradas" id="inputCEP" name="cep"></input>
+                <input class="boxEntradas" value="<?php echo $json_data->cep?>" id="inputCEP" name="cep"></input>
             </div>
             <div class="entradas">
                 <div class="nomeEntradas">Rua</div>
                 <div class="error" id="errorRua"></div>
-                <input class="boxEntradas" id="inputRua" name="rua"></input>
+                <input value="<?php echo $json_data->logradouro?>" class="boxEntradas" id="inputRua" name="rua"></input> 
             </div>
             <div class="entradas">
                 <div class="nomeEntradas">Numero</div>
@@ -100,12 +103,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
             <div class="entradas">
                 <div class="nomeEntradas">Cidade</div>
                 <div class="error" id="errorCidade"></div>
-                <input class="boxEntradas" id="inputCidade" name="cidade"></input>
+                <input value="<?php echo $json_data->localidade?>" class="boxEntradas" id="inputCidade" name="cidade"></input>
             </div>
             <div class="entradas">
                 <div class="nomeEntradas">Estado</div>
                 <div class="error" id="errorEstado"></div>
-                <input class="boxEntradas" id="inputEstado" name="estado"></input>
+                <input value="<?php echo $json_data->uf?>" class="boxEntradas" id="inputEstado" name="estado"></input>
             </div>
             <div class="entradas">
                 <div class="nomeEntradas">CONTATO</div>
