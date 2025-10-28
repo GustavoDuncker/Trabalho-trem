@@ -79,9 +79,29 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
                 <input class="boxEntradas" id="inputCpf" name="cpf"></input>
             </div>
             <div class="entradas">
-                <div class="nomeEntradas">ENDEREÇO</div>
-                <div class="error" id="errorEndereco"></div>
-                <input class="boxEntradas" id="inputEndereco" name="endereco"></input>
+                <div class="nomeEntradas">CEP</div>
+                <div class="error" id="errorCEP"></div>
+                <input class="boxEntradas" id="inputCEP" name="cep"></input>
+            </div>
+            <div class="entradas">
+                <div class="nomeEntradas">Rua</div>
+                <div class="error" id="errorRua"></div>
+                <input class="boxEntradas" id="inputRua" name="rua"></input>
+            </div>
+            <div class="entradas">
+                <div class="nomeEntradas">Numero</div>
+                <div class="error" id="errorNumero"></div>
+                <input class="boxEntradas" id="inputNumero" name="numero"></input>
+            </div>
+            <div class="entradas">
+                <div class="nomeEntradas">Cidade</div>
+                <div class="error" id="errorCidade"></div>
+                <input class="boxEntradas" id="inputCidade" name="cidade"></input>
+            </div>
+            <div class="entradas">
+                <div class="nomeEntradas">Estado</div>
+                <div class="error" id="errorEstado"></div>
+                <input class="boxEntradas" id="inputEstado" name="estado"></input>
             </div>
             <div class="entradas">
                 <div class="nomeEntradas">CONTATO</div>
