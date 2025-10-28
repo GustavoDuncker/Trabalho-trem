@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])){
 </head>
 <body>
     <header>
-        <a href="../index.php" id="txt-link">◀ Voltar</a>
+        <a href="../index.php" id="txtLink">◀ Voltar</a>
         <div id="boxTitulo">
             <h1>CADASTRO DE MAQUINISTAS</h1>
         </div>
