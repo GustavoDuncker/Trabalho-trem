@@ -1,6 +1,6 @@
-
-
 <?php
+
+
 
 function pegarEndereco(){
     if(isset($_POST['cep'])) {
