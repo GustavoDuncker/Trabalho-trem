@@ -38,7 +38,7 @@
       <div class="opcoes">
         <div class="opcao">
           <input type="radio" id="comentario" name="contact" value="comentario" />
-          <label for="comentario">Comentario</label>
+          <label for="comentario">Comentário</label>
         </div>
         <div class="opcao">
           <input type="radio" id="pergunta" name="contact" value="pergunta" />
