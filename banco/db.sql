@@ -133,4 +133,5 @@ CREATE TABLE AlertaUsuario (
 INSERT INTO Usuario (nome, email, senha, funcao)
 VALUES 
 ('Administrador', 'adm@gmail.com', '$2y$10$fmJWPoBqb1QBR/mgnRUuH.heyBzHL3wQo3zZZtepYm9hr9giH0Ia6', 'administrador'),
-('Maquinista', 'maq@gmail.com', '$2y$10$hQuYrSoTVR.t.V3xEgZRXuP9uiZOj9l2Gj7K7xnrPpMBOo3LpOv2a', 'maquinista');
+('Maquinista', 'maq@gmail.com', '$2y$10$hQuYrSoTVR.t.V3xEgZRXuP9uiZOj9l2Gj7K7xnrPpMBOo3LpOv2a', 'maquinista'),
+('Caponick', 'caio@gmail.com', '$2y$10$EFNYv3CS2cDhC8EESJ.XBuT1DSmS1TG341jUtcTH1qbmZ0xujUixC', 'administrador');
