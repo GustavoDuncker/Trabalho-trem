@@ -21,7 +21,7 @@ function valida() {
     const contemCaractereProibido = senha.includes(';');
 
     if (!emailValido) {
-        errorEmail.textContent = "Email inválido. Por favor, insira um email válido.";
+        errorEmail.textContent = "Email incorreto.";
         
     } else if (!temComprimentoMinimo || !temNumero || !temLetraMaiuscula || contemCaractereProibido) {
         errorSenha.textContent = 'Senha inválida. A senha deve ter pelo menos 8 caracteres, um número, uma letra maiúscula e não conter o caractere ";".';
