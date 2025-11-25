@@ -1,7 +1,7 @@
 <?php
 function validaCadastro($email, $senha, $nome, $funcao, $numero, $cpf, $cep, $rua, $numRua, $cidade, $estado, $contato) {
-    $invalidoEmail = array(' ', '!', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~');
-    $invalido = array('!', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~');
+    $invalidoEmail = array(' ', '!', '#', '%', '^', '&', '*', '(', ')', '=', '$', '+', ',', ';', '<', '>', '/', '\\', '|', '`', '~');
+    $invalido = array('!', '#', '%', '^', '&', '*', '(', ')', '$', '+', ',', ';', '<', '>', '/', '|', '\\','`', '~');
 
     
     $possuiInvalidoEmail = false;
