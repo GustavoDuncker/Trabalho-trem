@@ -15,3 +15,8 @@ function viacepBuscarCEP() {
   const cep = (document.getElementById('cep')?.value || '').replace(/\D/g, '');
   let form = document.getElementById('viacep-form');
   if (!form && cepInput) form = cepInput.closest('form');
+
+    const errorDiv = document.getElementById('errorCEP');
+  if (errorDiv) errorDiv.textContent = '';
+
+  
