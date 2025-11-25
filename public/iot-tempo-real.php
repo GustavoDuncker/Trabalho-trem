@@ -1,8 +1,7 @@
 <?php
-// Página para exibir leituras em tempo real
+
 include "../banco/db.php";
 
-// Busca as últimas 50 leituras
 $result = $conn->query("SELECT * FROM SensorLeitura ORDER BY dataHora DESC LIMIT 50");
 $leituras = [];
 while ($row = $result->fetch_assoc()) {
