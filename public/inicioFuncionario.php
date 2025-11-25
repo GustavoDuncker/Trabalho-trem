@@ -48,6 +48,10 @@ session_start();
                 <img src="../assets/images/iconTelefone.png" alt="Contatos"> 
                 <span>Contatos</span>
               </a>
+              <a href="iot-tempo-real.php" class="menu-item">
+                <img class="imgMenu" src="../assets/images/iconIoT.png" alt="Monitoramento IoT">
+                <span>Monitoramento IoT (Tempo Real)</span>
+              </a>
             </div>
           </section>
         </main>
