@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
 
             <div class="entradas">
                 <div class="nomeEntradas">Estado</div>
-                <div class="error" id="errorEstado"></div>
+                <div class="error" id="errorestado"></div>
                 <input 
                     class="boxEntradas" 
                     id="inputEstado" 
@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
 
             <div class="entradas">
                 <div class="nomeEntradas">CONTATO</div>
-                <div class="error" id="errorCtt"></div>
+                <div class="error" id="errorctt"></div>
                 <input class="boxEntradas" id="inputCtt" name="contato">
             </div>
 
