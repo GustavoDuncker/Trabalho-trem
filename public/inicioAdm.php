@@ -55,12 +55,11 @@ session_start();
                 <img class="imgMenu" src="../assets/images/iconIot.png" alt="Monitoramento IoT">
                 <span>Monitoramento IoT (Tempo Real)</span>
               </a>
+              <a href="cadastroFuncionarios.php" class="menu-item">
+                <img class="imgMenu" src="../assets/images/iconInfo2.png" alt="Cadastro de Funcionários">
+                <span>Cadastrar Funcionários</span>
+              </a>
             </div>
-            <a href="cadastroFuncionarios.php">
-                <div id="divCadastro">
-                    <h2 id="txtCadastro">CADASTRAR FUNCIONÁRIOS</h2>
-                </div>
-            </a>
           </section>
         </main>
       
