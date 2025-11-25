@@ -145,18 +145,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
                 <input class="boxEntradas" id="inputCtt" name="contato">
             </div>
 
-            <div class="entradas">
-                <div class="nomeEntradas">EMAIL</div>
-                <div class="error" id="errorEmail"></div>
-                <input class="boxEntradas" id="inputEmail" name="novo_email">
-            </div>
-
-            <div class="entradas">
-                <div class="nomeEntradas">SENHA</div>
-                <div class="error" id="errorSenha"></div>
-                <input class="boxEntradas" id="inputSenha" name="nova_senha" type="password">
-            </div>
-
             <div id="buttonCadastro">
                 <button type="submit" name="register" id="buttonTxt" value="1">CADASTRAR</button>
             </div>
