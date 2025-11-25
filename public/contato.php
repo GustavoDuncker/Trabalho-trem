@@ -25,7 +25,7 @@
     </div>
   </section>
   <section class="cabecalho3">
-    <h3 class="txtCabecalho3">CONTATOS</h3>
+    <h3 class="txtCabecalho3"></h3>
   </section>
   <main>
       <div class="voltar">
