@@ -29,7 +29,7 @@ session_start();
   </section>
         <main>
           <h1>Início</h1>
-          <section class="maquinista-secao">
+          <section class="maquinista-secao" style="margin-bottom: 50px; height: 570px;">
             <h2>MAQUINISTA</h2>
             <div class="grid-menu">
               <a href="MapaDeRede-Funcionario.php" class="menu-item">

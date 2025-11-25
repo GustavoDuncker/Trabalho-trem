@@ -32,7 +32,7 @@ session_start();
       
         <main>
           <h1>Início</h1>
-          <section class="maquinista-secao">
+          <section class="maquinista-secao" style="margin-bottom: 50px; height: 570px;">
             <h2>ADMINISTRADOR</h2>
             <div class="grid-menu">
               <a href="MapaDeRede.php" class="menu-item">
@@ -55,7 +55,7 @@ session_start();
                 <img class="imgMenu" src="../assets/images/iconIot.png" alt="Monitoramento IoT">
                 <span>Monitoramento IoT (Tempo Real)</span>
               </a>
-              <a href="cadastroFuncionarios.php" class="menu-item">
+              <a href="cadastroFuncionarios.php" class="menu-item" style=>
                 <img class="imgMenu" src="../assets/images/iconInfo2.png" alt="Cadastro de Funcionários">
                 <span>Cadastrar Funcionários</span>
               </a>
