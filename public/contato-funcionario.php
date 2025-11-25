@@ -1,24 +1,14 @@
 <?php
 include "../banco/db.php";
-session_start();
 $mensagem = "";
-// Busca dados do usuário logado
-$user_id = $_SESSION['id'] ?? null;
-$usuario = null;
-if ($user_id) {
-    $stmt = $conn->prepare("SELECT nome, email, funcao FROM Usuario WHERE idUsuario = ?");
-    $stmt->bind_param('i', $user_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $usuario = $result->fetch_assoc();
-    $stmt->close();
-}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $funcao = $usuario['funcao'] ?? '';
+    $nome = $_POST['nome'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $funcao = $_POST['funcao'] ?? '';
     $msg = $_POST['mensagem'] ?? '';
-    if ($funcao && $msg) {
-        $stmt = $conn->prepare("INSERT INTO ContatoMensagem (funcao, mensagem) VALUES (?, ?)");
-        $stmt->bind_param('ss', $funcao, $msg);
+    if ($nome && $email && $funcao && $msg) {
+        $stmt = $conn->prepare("INSERT INTO ContatoMensagem (nome, email, funcao, mensagem) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param('ssss', $nome, $email, $funcao, $msg);
         if ($stmt->execute()) {
             $mensagem = "Mensagem enviada com sucesso!";
         } else {
@@ -26,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         $stmt->close();
     } else {
-        $mensagem = "Preencha a mensagem.";
+        $mensagem = "Preencha todos os campos.";
     }
 }
 ?>
@@ -67,11 +57,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="grid-formulario">
       <div class="coluna-esquerda">
         <label for="nome">NOME COMPLETO</label>
-        <input id="nome" name="nome" type="text" value="<?= htmlspecialchars($usuario['nome'] ?? '') ?>" readonly />
+        <input id="nome" name="nome" type="text" placeholder="Digite seu nome" />
         <label for="email">EMAIL</label>
-        <input id="email" name="email" type="email" value="<?= htmlspecialchars($usuario['email'] ?? '') ?>" readonly />
+        <input id="email" name="email" type="email" placeholder="Digite seu e-mail" />
         <label for="funcao">FUNÇÃO</label>
-        <input id="funcao" name="funcao" type="text" value="<?= htmlspecialchars($usuario['funcao'] ?? '') ?>" readonly />
+        <select id="funcao" name="funcao">
+          <option value="">Selecione</option>
+          <option value="maquinista">Maquinista</option>
+          <option value="administrador">Administrador</option>
+        </select>
       </div>
       <div class="coluna-direita">
         <label for="mensagem">MENSAGEM</label>
