@@ -130,6 +130,24 @@ CREATE TABLE AlertaUsuario (
     FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
 );
 
+CREATE TABLE IF NOT EXISTS SensorLeitura (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    topico VARCHAR(50),
+    valor VARCHAR(50),
+    dataHora DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE ContatoMensagem (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    telefone VARCHAR(30),
+    funcao ENUM('maquinista','administrador') DEFAULT NULL,
+    assunto VARCHAR(200),
+    mensagem TEXT,
+    dataEnvio DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 INSERT INTO Usuario (nome, email, senha, funcao)
 VALUES 
 ('Administrador', 'adm@gmail.com', '$2y$10$fmJWPoBqb1QBR/mgnRUuH.heyBzHL3wQo3zZZtepYm9hr9giH0Ia6', 'administrador'),

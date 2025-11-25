@@ -17,9 +17,6 @@
 
   
   <section class="cabecalho2">
-    <div class="pesquisa">
-      <input type="text" placeholder="Pesquisar" class="pesquisaInput"/>
-    </div>
     <div class="linhasLink">
       <img src="../assets/images/iconTrem.png" alt="linhas" class="imgLinha"/>
     </div>

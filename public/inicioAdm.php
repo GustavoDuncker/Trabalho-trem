@@ -23,15 +23,13 @@ session_start();
             <img src="../assets/images/treminicio.png" alt="Ferroviária Jatotrem" class="logo">
             <h1 class="txtFerroviaria">F e r r o v i á r i a</h1>
             <h2 class="txtJato">JATOTREM</h2>
-          </div>
-          <div class="pesquisa">
-            <input type="text" placeholder="Pesquisar">
-            <a href="logout.php?logout=1"><button id="buttonSair">SAIR</button></a>
+            
           </div>
         </header>
       
         <main>
           <h1>Início</h1>
+          <h2><a href="logout.php?logout=1" id="buttonSair">Sair</a></h2>
           <section class="maquinista-secao" style="margin-bottom: 50px; height: 570px;">
             <h2>ADMINISTRADOR</h2>
             <div class="grid-menu">

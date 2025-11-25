@@ -18,9 +18,6 @@
 
   
   <section class="cabecalho2">
-    <div class="pesquisa">
-      <input type="text" placeholder="Pesquisar" class="pesquisaInput"/>
-    </div>
     <div class="mapaLink">
       <img src="../assets/images/mapaTrem.png" alt="Mapa" class="imgMapa"/>
     </div>
