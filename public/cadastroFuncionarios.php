@@ -157,6 +157,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
                 <input class="boxEntradas" id="inputSenha" name="nova_senha" type="password">
             </div>
 
+            <div class="entradas">
+                <div class="error" id="errorUpload"></div>
+                <button type="button" id="buttonUpload" class="boxEntradas" style="width: 100%; height: 40px; margin-top: 5px;" onclick="window.location.href='uploadImagem.php'">UPLOAD IMAGEM</button>
+            </div>
+
             <div id="buttonCadastro">
                 <button type="submit" name="register" id="buttonTxt" value="1">CADASTRAR</button>
             </div>

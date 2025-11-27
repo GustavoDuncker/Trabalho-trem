@@ -14,6 +14,7 @@ CREATE TABLE Usuario (
     numRua VARCHAR(10),
     cidade VARCHAR(50),
     estado VARCHAR(50)
+    foto_perfil VARCHAR(255) not null
 );
 
 CREATE TABLE Estacao (
