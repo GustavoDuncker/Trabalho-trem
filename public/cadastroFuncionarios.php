@@ -25,10 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
     $novo_email = $_POST['novo_email'] ?? "";
     $nova_senha = $_POST['nova_senha'] ?? "";
     $senhaHash = password_hash($nova_senha, PASSWORD_DEFAULT);
+    $fotoPerfil = null;
+    if (isset($_FILES['fotoPerfil']) && $_FILES['fotoPerfil']['error'] === UPLOAD_ERR_OK) {
+        $fotoPerfil = file_get_contents($_FILES['fotoPerfil']['tmp_name']);
+    }
 
     if ($novo_email && $nova_senha) {
-        $stmt = $conn->prepare("INSERT INTO usuario (nome, funcao, cpf, cep, rua, numRua, cidade, estado, contato, email, senha) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssssssssss", $new_user, $new_func, $new_cpf, $new_cep, $new_rua, $new_numRua, $new_cidade, $new_estado, $new_cont, $novo_email, $senhaHash);
+        $stmt = $conn->prepare("INSERT INTO usuario (nome, funcao, cpf, cep, rua, numRua, cidade, estado, contato, email, senha, fotoPerfil) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssssssss", $new_user, $new_func, $new_cpf, $new_cep, $new_rua, $new_numRua, $new_cidade, $new_estado, $new_cont, $novo_email, $senhaHash, $fotoPerfil);
+        $stmt->send_long_data(11, $fotoPerfil);
 
         if ($stmt->execute()) {
             $register_msg = "Usuário cadastrado com sucesso!";
@@ -70,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
             <div style="color: red; margin-bottom: 10px;"><?= $register_msg ?></div>
         <?php endif; ?>
 
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
 
             <div class="entradas">
                 <div class="nomeEntradas">NOME</div>

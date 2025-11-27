@@ -1,4 +1,35 @@
-<?php?>
+<?php
+include "../banco/db.php";
+session_start();
+$mensagem = "";
+// Busca dados do usuário logado
+$user_id = $_SESSION['id'] ?? null;
+$usuario = null;
+if ($user_id) {
+    $stmt = $conn->prepare("SELECT nome, email, contato, funcao FROM Usuario WHERE idUsuario = ?");
+    $stmt->bind_param('i', $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $usuario = $result->fetch_assoc();
+    $stmt->close();
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $funcao = $usuario['funcao'] ?? '';
+    $msg = $_POST['mensagem'] ?? '';
+    if ($funcao && $msg) {
+        $stmt = $conn->prepare("INSERT INTO ContatoMensagem (funcao, mensagem) VALUES (?, ?)");
+        $stmt->bind_param('ss', $funcao, $msg);
+        if ($stmt->execute()) {
+            $mensagem = "Mensagem enviada com sucesso!";
+        } else {
+            $mensagem = "Erro ao enviar mensagem.";
+        }
+        $stmt->close();
+    } else {
+        $mensagem = "Preencha a mensagem.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,9 +48,6 @@
     </div>
   </header>
   <section class="cabecalho2">
-    <div class="pesquisa">
-      <input type="text" placeholder="Pesquisar" class="pesquisaInput"/>
-    </div>
     <div class="linhasLink">
       <img src="../assets/images/iconTrem.png" alt="linhas" class="imgLinha"/>
     </div>
@@ -32,40 +60,22 @@
     <a href="inicioAdm.php">◀ Voltar</a>
 </div>
 <div id="formulario">
-  <form id="meuFormulario">
-    <fieldset>
-      <legend>Qual o motivo do meu contato?</legend>
-      <div class="opcoes">
-        <div class="opcao">
-          <input type="radio" id="comentario" name="contact" value="comentario" />
-          <label for="comentario">Comentário</label>
-        </div>
-        <div class="opcao">
-          <input type="radio" id="pergunta" name="contact" value="pergunta" />
-          <label for="pergunta">Pergunta</label>
-        </div>
-        <div class="opcao">
-          <input type="radio" id="sugestao" name="contact" value="sugestao" />
-          <label for="sugestao">Sugestão</label>
-        </div>
-        <div class="opcao">
-          <input type="radio" id="reclamacao" name="contact" value="reclamacao" />
-          <label for="reclamacao">Reclamação</label>
-        </div>
-      </div>
-    </fieldset>
+  <?php if ($mensagem): ?>
+    <div style="color: red; margin-bottom: 10px; text-align:center; font-weight:bold;"> <?= $mensagem ?> </div>
+  <?php endif; ?>
+  <form id="meuFormulario" method="post">
     <div class="grid-formulario">
       <div class="coluna-esquerda">
         <label for="nome">NOME COMPLETO</label>
-        <input id="nome" type="text" placeholder="Digite seu nome" />
+        <input id="nome" name="nome" type="text" value="<?= htmlspecialchars($usuario['nome'] ?? '') ?>" readonly />
         <label for="email">EMAIL</label>
-        <input id="email" type="email" placeholder="Digite seu e-mail" />
-        <label for="telefone">TELEFONE</label>
-        <input id="telefone" type="tel" placeholder="Digite seu telefone" />
+        <input id="email" name="email" type="email" value="<?= htmlspecialchars($usuario['email'] ?? '') ?>" readonly />
+        <label for="funcao">FUNÇÃO</label>
+        <input id="funcao" name="funcao" type="text" value="<?= htmlspecialchars($usuario['funcao'] ?? '') ?>" readonly />
       </div>
       <div class="coluna-direita">
         <label for="mensagem">MENSAGEM</label>
-        <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
+        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
       </div>
     </div>
     <div id="botaozinho">
