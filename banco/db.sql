@@ -13,7 +13,8 @@ CREATE TABLE Usuario (
     rua VARCHAR(100),
     numRua VARCHAR(10),
     cidade VARCHAR(50),
-    estado VARCHAR(50)
+    estado VARCHAR(50),
+    fotoPerfil LONGBLOB
 );
 
 CREATE TABLE Estacao (
